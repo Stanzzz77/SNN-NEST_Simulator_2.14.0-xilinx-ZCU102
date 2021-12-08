@@ -1,0 +1,989 @@
+
+
+================================================================
+== Vivado HLS Report for 'update_n'
+================================================================
+* Date:           Sun Aug 22 22:27:34 2021
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        iaf-zcu102-721-16bing-pingpang
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.750|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+--------+-----+--------+---------+
+    |    Latency   |   Interval   | Pipeline|
+    | min |   max  | min |   max  |   Type  |
+    +-----+--------+-----+--------+---------+
+    |   40|  112546|   40|  112546|   none  |
+    +-----+--------+-----+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+--------+----------+-----------+-----------+-----------+----------+
+        |          |    Latency   | Iteration|  Initiation Interval  |    Trip   |          |
+        | Loop Name| min |   max  |  Latency |  achieved |   target  |   Count   | Pipelined|
+        +----------+-----+--------+----------+-----------+-----------+-----------+----------+
+        |- Loop 1  |   21|  112527|        30|          2|          1| 0 ~ 56250 |    yes   |
+        +----------+-----+--------+----------+-----------+-----------+-----------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 2
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 30
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 49
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 30, States = { 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / true
+3 --> 
+	4  / true
+4 --> 
+	5  / true
+5 --> 
+	6  / true
+6 --> 
+	7  / true
+7 --> 
+	8  / true
+8 --> 
+	9  / true
+9 --> 
+	10  / true
+10 --> 
+	11  / true
+11 --> 
+	12  / true
+12 --> 
+	13  / true
+13 --> 
+	14  / true
+14 --> 
+	15  / true
+15 --> 
+	16  / true
+16 --> 
+	17  / true
+17 --> 
+	18  / true
+18 --> 
+	19  / true
+19 --> 
+	20  / true
+20 --> 
+	21  / true
+21 --> 
+	22  / true
+22 --> 
+	23  / true
+23 --> 
+	24  / true
+24 --> 
+	25  / true
+25 --> 
+	26  / true
+26 --> 
+	27  / true
+27 --> 
+	28  / true
+28 --> 
+	29  / true
+29 --> 
+	30  / true
+30 --> 
+	31  / true
+31 --> 
+	32  / true
+32 --> 
+	33  / true
+33 --> 
+	42  / (!tmp_8)
+	34  / (tmp_8)
+34 --> 
+	35  / true
+35 --> 
+	36  / true
+36 --> 
+	37  / true
+37 --> 
+	38  / true
+38 --> 
+	39  / true
+39 --> 
+	40  / true
+40 --> 
+	41  / true
+41 --> 
+	12  / true
+42 --> 
+	43  / true
+43 --> 
+	44  / true
+44 --> 
+	45  / true
+45 --> 
+	46  / true
+46 --> 
+	47  / true
+47 --> 
+	48  / true
+48 --> 
+	49  / true
+49 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.00>
+ST_1 : Operation 50 [1/1] (0.00ns)   --->   "%weighted_spikes_ex_1 = alloca i256"   --->   Operation 50 'alloca' 'weighted_spikes_ex_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 51 [1/1] (0.00ns)   --->   "%weighted_spikes_in_1 = alloca i256"   --->   Operation 51 'alloca' 'weighted_spikes_in_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 52 [1/1] (0.00ns)   --->   "%I_e_1 = alloca i256"   --->   Operation 52 'alloca' 'I_e_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 53 [1/1] (0.00ns)   --->   "%i_syn_ex_1 = alloca i256"   --->   Operation 53 'alloca' 'i_syn_ex_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 54 [1/1] (0.00ns)   --->   "%i_syn_in_1 = alloca i256"   --->   Operation 54 'alloca' 'i_syn_in_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 55 [1/1] (0.00ns)   --->   "%r_ref_1 = alloca i256"   --->   Operation 55 'alloca' 'r_ref_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 56 [1/1] (0.00ns)   --->   "%V_m_1 = alloca i256"   --->   Operation 56 'alloca' 'V_m_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 57 [1/1] (0.00ns)   --->   "%weighted_spikes_ex_2 = alloca i256"   --->   Operation 57 'alloca' 'weighted_spikes_ex_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 58 [1/1] (0.00ns)   --->   "%weighted_spikes_in_2 = alloca i256"   --->   Operation 58 'alloca' 'weighted_spikes_in_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 59 [1/1] (0.00ns)   --->   "%I_e_2 = alloca i256"   --->   Operation 59 'alloca' 'I_e_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 60 [1/1] (0.00ns)   --->   "%i_syn_ex_2 = alloca i256"   --->   Operation 60 'alloca' 'i_syn_ex_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 61 [1/1] (0.00ns)   --->   "%i_syn_in_2 = alloca i256"   --->   Operation 61 'alloca' 'i_syn_in_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 62 [1/1] (0.00ns)   --->   "%r_ref_2 = alloca i256"   --->   Operation 62 'alloca' 'r_ref_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 63 [1/1] (0.00ns)   --->   "%V_m_2 = alloca i256"   --->   Operation 63 'alloca' 'V_m_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 64 [2/2] (1.00ns)   --->   "%output3_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %output3_s)"   --->   Operation 64 'read' 'output3_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 65 [2/2] (1.00ns)   --->   "%output2_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %output2_s)"   --->   Operation 65 'read' 'output2_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 66 [2/2] (1.00ns)   --->   "%output1_offset_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %output1_offset)"   --->   Operation 66 'read' 'output1_offset_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 67 [2/2] (1.00ns)   --->   "%output0_offset_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %output0_offset)"   --->   Operation 67 'read' 'output0_offset_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 68 [2/2] (1.00ns)   --->   "%input01_V_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %input01_V)"   --->   Operation 68 'read' 'input01_V_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 69 [2/2] (1.00ns)   --->   "%input00_V_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %input00_V)"   --->   Operation 69 'read' 'input00_V_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 70 [2/2] (1.00ns)   --->   "%stable_para_offset_r = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %stable_para_offset)"   --->   Operation 70 'read' 'stable_para_offset_r' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_1 : Operation 71 [2/2] (1.00ns)   --->   "%num_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %num)"   --->   Operation 71 'read' 'num_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+
+State 2 <SV = 1> <Delay = 4.99>
+ST_2 : Operation 72 [1/2] (1.00ns)   --->   "%output3_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %output3_s)"   --->   Operation 72 'read' 'output3_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 73 [1/2] (1.00ns)   --->   "%output2_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %output2_s)"   --->   Operation 73 'read' 'output2_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 74 [1/2] (1.00ns)   --->   "%output1_offset_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %output1_offset)"   --->   Operation 74 'read' 'output1_offset_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 75 [1/2] (1.00ns)   --->   "%output0_offset_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %output0_offset)"   --->   Operation 75 'read' 'output0_offset_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 76 [1/2] (1.00ns)   --->   "%input01_V_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %input01_V)"   --->   Operation 76 'read' 'input01_V_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 77 [1/2] (1.00ns)   --->   "%input00_V_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %input00_V)"   --->   Operation 77 'read' 'input00_V_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 78 [1/2] (1.00ns)   --->   "%stable_para_offset_r = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %stable_para_offset)"   --->   Operation 78 'read' 'stable_para_offset_r' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 79 [1/2] (1.00ns)   --->   "%num_read = call i32 @_ssdm_op_Read.s_axilite.i32(i32 %num)"   --->   Operation 79 'read' 'num_read' <Predicate = true> <Delay = 1.00> <Core = "s_axilite">   --->   Core 10 's_axilite' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write'>
+ST_2 : Operation 80 [1/1] (0.00ns)   --->   "%output3_1 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %output3_read, i32 2, i32 31)"   --->   Operation 80 'partselect' 'output3_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 81 [1/1] (0.00ns)   --->   "%output2_1 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %output2_read, i32 2, i32 31)"   --->   Operation 81 'partselect' 'output2_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 82 [1/1] (0.00ns)   --->   "%output1_offset9 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %output1_offset_read, i32 2, i32 31)"   --->   Operation 82 'partselect' 'output1_offset9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 83 [1/1] (0.00ns)   --->   "%output0_offset7 = call i30 @_ssdm_op_PartSelect.i30.i32.i32.i32(i32 %output0_offset_read, i32 2, i32 31)"   --->   Operation 83 'partselect' 'output0_offset7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 84 [1/1] (0.00ns)   --->   "%input01_V5 = call i25 @_ssdm_op_PartSelect.i25.i32.i32.i32(i32 %input01_V_read, i32 7, i32 31)"   --->   Operation 84 'partselect' 'input01_V5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 85 [1/1] (0.00ns)   --->   "%input00_V3 = call i25 @_ssdm_op_PartSelect.i25.i32.i32.i32(i32 %input00_V_read, i32 7, i32 31)"   --->   Operation 85 'partselect' 'input00_V3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 86 [1/1] (0.00ns)   --->   "%stable_para_offset1 = call i26 @_ssdm_op_PartSelect.i26.i32.i32.i32(i32 %stable_para_offset_r, i32 6, i32 31)"   --->   Operation 86 'partselect' 'stable_para_offset1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 87 [9/9] (1.60ns)   --->   "%tmp_31 = call fastcc { i256, i256, i256, i256, i256, i256, i256 } @update_indata(i30 0, i1024* %input01, i25 %input00_V3, i1024* %input00, i25 %input01_V5)"   --->   Operation 87 'call' 'tmp_31' <Predicate = true> <Delay = 1.60> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 88 [1/1] (0.00ns)   --->   "%tmp_12 = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %num_read, i32 31)" [../pingpang/neuron.cpp:189]   --->   Operation 88 'bitselect' 'tmp_12' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 89 [1/1] (1.01ns)   --->   "%p_neg = sub i32 0, %num_read" [../pingpang/neuron.cpp:189]   --->   Operation 89 'sub' 'p_neg' <Predicate = true> <Delay = 1.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 90 [1/1] (0.00ns)   --->   "%tmp_32 = call i29 @_ssdm_op_PartSelect.i29.i32.i32.i32(i32 %p_neg, i32 3, i32 31)" [../pingpang/neuron.cpp:189]   --->   Operation 90 'partselect' 'tmp_32' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 91 [1/1] (0.00ns)   --->   "%p_lshr_cast = zext i29 %tmp_32 to i30" [../pingpang/neuron.cpp:189]   --->   Operation 91 'zext' 'p_lshr_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 92 [1/1] (0.98ns)   --->   "%p_neg_t = sub i30 0, %p_lshr_cast" [../pingpang/neuron.cpp:189]   --->   Operation 92 'sub' 'p_neg_t' <Predicate = true> <Delay = 0.98> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 93 [1/1] (0.00ns)   --->   "%tmp_33 = call i29 @_ssdm_op_PartSelect.i29.i32.i32.i32(i32 %num_read, i32 3, i32 31)" [../pingpang/neuron.cpp:189]   --->   Operation 93 'partselect' 'tmp_33' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 94 [1/1] (0.00ns)   --->   "%p_lshr_f_cast = zext i29 %tmp_33 to i30" [../pingpang/neuron.cpp:189]   --->   Operation 94 'zext' 'p_lshr_f_cast' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 95 [1/1] (0.38ns)   --->   "%time_s = select i1 %tmp_12, i30 %p_neg_t, i30 %p_lshr_f_cast" [../pingpang/neuron.cpp:189]   --->   Operation 95 'select' 'time_s' <Predicate = true> <Delay = 0.38> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.41> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 96 [1/1] (0.00ns)   --->   "%tmp_17 = trunc i32 %num_read to i3"   --->   Operation 96 'trunc' 'tmp_17' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 97 [1/1] (0.00ns)   --->   "%p_and_f = call i32 @_ssdm_op_BitConcatenate.i32.i29.i3(i29 0, i3 %tmp_17)" [../pingpang/neuron.cpp:190]   --->   Operation 97 'bitconcatenate' 'p_and_f' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 98 [1/1] (0.00ns)   --->   "%tmp_19 = trunc i32 %p_neg to i3" [../pingpang/neuron.cpp:189]   --->   Operation 98 'trunc' 'tmp_19' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 99 [1/1] (0.00ns)   --->   "%p_and_t = call i32 @_ssdm_op_BitConcatenate.i32.i29.i3(i29 0, i3 %tmp_19)" [../pingpang/neuron.cpp:190]   --->   Operation 99 'bitconcatenate' 'p_and_t' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 100 [1/1] (1.01ns)   --->   "%p_neg_t1 = sub i32 0, %p_and_t" [../pingpang/neuron.cpp:190]   --->   Operation 100 'sub' 'p_neg_t1' <Predicate = true> <Delay = 1.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 101 [1/1] (0.44ns)   --->   "%rmd = select i1 %tmp_12, i32 %p_neg_t1, i32 %p_and_f" [../pingpang/neuron.cpp:190]   --->   Operation 101 'select' 'rmd' <Predicate = true> <Delay = 0.44> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.41> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 102 [1/1] (0.00ns)   --->   "%tmp_23 = trunc i32 %rmd to i5" [../pingpang/neuron.cpp:190]   --->   Operation 102 'trunc' 'tmp_23' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 103 [1/1] (0.00ns)   --->   "%tmp_28 = trunc i32 %rmd to i4" [../pingpang/neuron.cpp:190]   --->   Operation 103 'trunc' 'tmp_28' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 104 [1/1] (0.72ns)   --->   "%tmp = icmp eq i4 %tmp_28, 0" [../pingpang/neuron.cpp:191]   --->   Operation 104 'icmp' 'tmp' <Predicate = true> <Delay = 0.72> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 105 [1/1] (0.78ns)   --->   "%rmd_0_off = add i5 -2, %tmp_23" [../pingpang/neuron.cpp:228]   --->   Operation 105 'add' 'rmd_0_off' <Predicate = true> <Delay = 0.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 106 [1/1] (0.72ns)   --->   "%tmp_7 = icmp eq i4 %tmp_28, 3" [../pingpang/neuron.cpp:239]   --->   Operation 106 'icmp' 'tmp_7' <Predicate = true> <Delay = 0.72> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 107 [1/1] (0.00ns)   --->   "%tmp_29 = call i4 @_ssdm_op_PartSelect.i4.i5.i32.i32(i5 %rmd_0_off, i32 1, i32 4)" [../pingpang/neuron.cpp:228]   --->   Operation 107 'partselect' 'tmp_29' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 108 [1/1] (0.72ns)   --->   "%icmp = icmp ne i4 %tmp_29, 0" [../pingpang/neuron.cpp:228]   --->   Operation 108 'icmp' 'icmp' <Predicate = true> <Delay = 0.72> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 8.75>
+ST_3 : Operation 109 [8/9] (8.75ns)   --->   "%tmp_31 = call fastcc { i256, i256, i256, i256, i256, i256, i256 } @update_indata(i30 0, i1024* %input01, i25 %input00_V3, i1024* %input00, i25 %input01_V5)"   --->   Operation 109 'call' 'tmp_31' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 8.75>
+ST_4 : Operation 110 [1/1] (0.00ns)   --->   "%tmp_30 = zext i26 %stable_para_offset1 to i64"   --->   Operation 110 'zext' 'tmp_30' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 111 [1/1] (0.00ns)   --->   "%stable_para_addr = getelementptr i512* %stable_para, i64 %tmp_30"   --->   Operation 111 'getelementptr' 'stable_para_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 112 [7/7] (8.75ns)   --->   "%stable_para_load_req = call i1 @_ssdm_op_ReadReq.m_axi.i512P(i512* %stable_para_addr, i32 1)" [../pingpang/neuron.cpp:141]   --->   Operation 112 'readreq' 'stable_para_load_req' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_4 : Operation 113 [7/9] (8.75ns)   --->   "%tmp_31 = call fastcc { i256, i256, i256, i256, i256, i256, i256 } @update_indata(i30 0, i1024* %input01, i25 %input00_V3, i1024* %input00, i25 %input01_V5)"   --->   Operation 113 'call' 'tmp_31' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 8.75>
+ST_5 : Operation 114 [6/7] (8.75ns)   --->   "%stable_para_load_req = call i1 @_ssdm_op_ReadReq.m_axi.i512P(i512* %stable_para_addr, i32 1)" [../pingpang/neuron.cpp:141]   --->   Operation 114 'readreq' 'stable_para_load_req' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_5 : Operation 115 [6/9] (8.75ns)   --->   "%tmp_31 = call fastcc { i256, i256, i256, i256, i256, i256, i256 } @update_indata(i30 0, i1024* %input01, i25 %input00_V3, i1024* %input00, i25 %input01_V5)"   --->   Operation 115 'call' 'tmp_31' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 6 <SV = 5> <Delay = 8.75>
+ST_6 : Operation 116 [5/7] (8.75ns)   --->   "%stable_para_load_req = call i1 @_ssdm_op_ReadReq.m_axi.i512P(i512* %stable_para_addr, i32 1)" [../pingpang/neuron.cpp:141]   --->   Operation 116 'readreq' 'stable_para_load_req' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_6 : Operation 117 [5/9] (8.75ns)   --->   "%tmp_31 = call fastcc { i256, i256, i256, i256, i256, i256, i256 } @update_indata(i30 0, i1024* %input01, i25 %input00_V3, i1024* %input00, i25 %input01_V5)"   --->   Operation 117 'call' 'tmp_31' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 7 <SV = 6> <Delay = 8.75>
+ST_7 : Operation 118 [4/7] (8.75ns)   --->   "%stable_para_load_req = call i1 @_ssdm_op_ReadReq.m_axi.i512P(i512* %stable_para_addr, i32 1)" [../pingpang/neuron.cpp:141]   --->   Operation 118 'readreq' 'stable_para_load_req' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_7 : Operation 119 [4/9] (8.75ns)   --->   "%tmp_31 = call fastcc { i256, i256, i256, i256, i256, i256, i256 } @update_indata(i30 0, i1024* %input01, i25 %input00_V3, i1024* %input00, i25 %input01_V5)"   --->   Operation 119 'call' 'tmp_31' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 8 <SV = 7> <Delay = 8.75>
+ST_8 : Operation 120 [3/7] (8.75ns)   --->   "%stable_para_load_req = call i1 @_ssdm_op_ReadReq.m_axi.i512P(i512* %stable_para_addr, i32 1)" [../pingpang/neuron.cpp:141]   --->   Operation 120 'readreq' 'stable_para_load_req' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_8 : Operation 121 [3/9] (8.75ns)   --->   "%tmp_31 = call fastcc { i256, i256, i256, i256, i256, i256, i256 } @update_indata(i30 0, i1024* %input01, i25 %input00_V3, i1024* %input00, i25 %input01_V5)"   --->   Operation 121 'call' 'tmp_31' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 9 <SV = 8> <Delay = 8.75>
+ST_9 : Operation 122 [2/7] (8.75ns)   --->   "%stable_para_load_req = call i1 @_ssdm_op_ReadReq.m_axi.i512P(i512* %stable_para_addr, i32 1)" [../pingpang/neuron.cpp:141]   --->   Operation 122 'readreq' 'stable_para_load_req' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_9 : Operation 123 [2/9] (8.75ns)   --->   "%tmp_31 = call fastcc { i256, i256, i256, i256, i256, i256, i256 } @update_indata(i30 0, i1024* %input01, i25 %input00_V3, i1024* %input00, i25 %input01_V5)"   --->   Operation 123 'call' 'tmp_31' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 10 <SV = 9> <Delay = 8.75>
+ST_10 : Operation 124 [1/7] (8.75ns)   --->   "%stable_para_load_req = call i1 @_ssdm_op_ReadReq.m_axi.i512P(i512* %stable_para_addr, i32 1)" [../pingpang/neuron.cpp:141]   --->   Operation 124 'readreq' 'stable_para_load_req' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_10 : Operation 125 [1/9] (8.75ns)   --->   "%tmp_31 = call fastcc { i256, i256, i256, i256, i256, i256, i256 } @update_indata(i30 0, i1024* %input01, i25 %input00_V3, i1024* %input00, i25 %input01_V5)"   --->   Operation 125 'call' 'tmp_31' <Predicate = true> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_10 : Operation 126 [1/1] (0.00ns)   --->   "%weighted_spikes_ex_s = extractvalue { i256, i256, i256, i256, i256, i256, i256 } %tmp_31, 0"   --->   Operation 126 'extractvalue' 'weighted_spikes_ex_s' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 127 [1/1] (0.00ns)   --->   "%weighted_spikes_in_s = extractvalue { i256, i256, i256, i256, i256, i256, i256 } %tmp_31, 1"   --->   Operation 127 'extractvalue' 'weighted_spikes_in_s' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 128 [1/1] (0.00ns)   --->   "%I_e_s = extractvalue { i256, i256, i256, i256, i256, i256, i256 } %tmp_31, 2"   --->   Operation 128 'extractvalue' 'I_e_s' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 129 [1/1] (0.00ns)   --->   "%i_syn_ex_s = extractvalue { i256, i256, i256, i256, i256, i256, i256 } %tmp_31, 3"   --->   Operation 129 'extractvalue' 'i_syn_ex_s' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 130 [1/1] (0.00ns)   --->   "%i_syn_in_s = extractvalue { i256, i256, i256, i256, i256, i256, i256 } %tmp_31, 4"   --->   Operation 130 'extractvalue' 'i_syn_in_s' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 131 [1/1] (0.00ns)   --->   "%r_ref_s = extractvalue { i256, i256, i256, i256, i256, i256, i256 } %tmp_31, 5"   --->   Operation 131 'extractvalue' 'r_ref_s' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 132 [1/1] (0.00ns)   --->   "%V_m_s = extractvalue { i256, i256, i256, i256, i256, i256, i256 } %tmp_31, 6"   --->   Operation 132 'extractvalue' 'V_m_s' <Predicate = true> <Delay = 0.00>
+
+State 11 <SV = 10> <Delay = 8.75>
+ST_11 : Operation 133 [1/1] (0.00ns)   --->   "%tmp_9 = zext i30 %output3_1 to i64"   --->   Operation 133 'zext' 'tmp_9' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 134 [1/1] (0.00ns)   --->   "%tmp_9_cast = zext i30 %output3_1 to i33"   --->   Operation 134 'zext' 'tmp_9_cast' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 135 [1/1] (0.00ns)   --->   "%output1_addr = getelementptr i32* %output1_s, i64 %tmp_9"   --->   Operation 135 'getelementptr' 'output1_addr' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 136 [1/1] (0.00ns)   --->   "%tmp_25 = zext i30 %output2_1 to i64"   --->   Operation 136 'zext' 'tmp_25' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 137 [1/1] (0.00ns)   --->   "%tmp_25_cast = zext i30 %output2_1 to i33"   --->   Operation 137 'zext' 'tmp_25_cast' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 138 [1/1] (0.00ns)   --->   "%output1_addr_1 = getelementptr i32* %output1_s, i64 %tmp_25"   --->   Operation 138 'getelementptr' 'output1_addr_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 139 [1/1] (0.00ns)   --->   "%tmp_26 = zext i30 %output1_offset9 to i64"   --->   Operation 139 'zext' 'tmp_26' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 140 [1/1] (0.00ns)   --->   "%tmp_26_cast = zext i30 %output1_offset9 to i33"   --->   Operation 140 'zext' 'tmp_26_cast' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 141 [1/1] (0.00ns)   --->   "%output0_addr = getelementptr i32* %output0_s, i64 %tmp_26"   --->   Operation 141 'getelementptr' 'output0_addr' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 142 [1/1] (0.00ns)   --->   "%tmp_27 = zext i30 %output0_offset7 to i64"   --->   Operation 142 'zext' 'tmp_27' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 143 [1/1] (0.00ns)   --->   "%tmp_27_cast = zext i30 %output0_offset7 to i33"   --->   Operation 143 'zext' 'tmp_27_cast' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 144 [1/1] (0.00ns)   --->   "%output0_addr_1 = getelementptr i32* %output0_s, i64 %tmp_27"   --->   Operation 144 'getelementptr' 'output0_addr_1' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 145 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %output1_s), !map !79"   --->   Operation 145 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 146 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32* %output0_s), !map !86"   --->   Operation 146 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 147 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1024* %input00), !map !91"   --->   Operation 147 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 148 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i1024* %input01), !map !132"   --->   Operation 148 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 149 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i512* %stable_para), !map !157"   --->   Operation 149 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 150 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(i32 %num), !map !238"   --->   Operation 150 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 151 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([9 x i8]* @update_n_str) nounwind"   --->   Operation 151 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 152 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %output0_s, [6 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 900000, [9 x i8]* @p_str2, [6 x i8]* @p_str3, [1 x i8]* @p_str, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 152 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 153 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %output1_s, [6 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 900000, [9 x i8]* @p_str4, [6 x i8]* @p_str3, [1 x i8]* @p_str, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 153 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 154 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %output0_offset, [10 x i8]* @p_str5, i32 1, i32 1, [1 x i8]* @p_str, i32 0, i32 0, [9 x i8]* @p_str6, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 154 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 155 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %output1_offset, [10 x i8]* @p_str5, i32 1, i32 1, [1 x i8]* @p_str, i32 0, i32 0, [9 x i8]* @p_str6, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 155 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 156 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %output2_s, [10 x i8]* @p_str5, i32 1, i32 1, [1 x i8]* @p_str, i32 0, i32 0, [9 x i8]* @p_str6, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 156 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 157 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %output3_s, [10 x i8]* @p_str5, i32 1, i32 1, [1 x i8]* @p_str, i32 0, i32 0, [9 x i8]* @p_str6, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 157 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 158 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1024* %input00, [6 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 900000, [8 x i8]* @p_str8, [6 x i8]* @p_str3, [1 x i8]* @p_str, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 158 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 159 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i1024* %input01, [6 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 900000, [8 x i8]* @p_str9, [6 x i8]* @p_str3, [1 x i8]* @p_str, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 159 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 160 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i512* %stable_para, [6 x i8]* @p_str1, i32 0, i32 0, [1 x i8]* @p_str, i32 0, i32 16, [12 x i8]* @p_str10, [6 x i8]* @p_str3, [1 x i8]* @p_str, i32 16, i32 16, i32 16, i32 16, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind"   --->   Operation 160 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 161 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %input01_V, [10 x i8]* @p_str5, i32 1, i32 1, [1 x i8]* @p_str, i32 0, i32 0, [9 x i8]* @p_str6, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 161 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 162 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %input00_V, [10 x i8]* @p_str5, i32 1, i32 1, [1 x i8]* @p_str, i32 0, i32 0, [9 x i8]* @p_str6, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str)"   --->   Operation 162 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 163 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %stable_para_offset, [10 x i8]* @p_str5, i32 1, i32 1, [1 x i8]* @p_str, i32 0, i32 0, [9 x i8]* @p_str6, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind"   --->   Operation 163 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 164 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 %num, [10 x i8]* @p_str5, i32 1, i32 1, [1 x i8]* @p_str, i32 0, i32 0, [9 x i8]* @p_str6, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [../pingpang/neuron.cpp:136]   --->   Operation 164 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 165 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32 0, [10 x i8]* @p_str5, i32 1, i32 1, [1 x i8]* @p_str, i32 0, i32 0, [9 x i8]* @p_str6, [1 x i8]* @p_str, [1 x i8]* @p_str, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str, [1 x i8]* @p_str) nounwind" [../pingpang/neuron.cpp:137]   --->   Operation 165 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 166 [1/1] (8.75ns)   --->   "%stable_para_addr_rea = call i512 @_ssdm_op_Read.m_axi.i512P(i512* %stable_para_addr)" [../pingpang/neuron.cpp:141]   --->   Operation 166 'read' 'stable_para_addr_rea' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_11 : Operation 167 [1/1] (0.00ns)   --->   "%tmp_10 = trunc i512 %stable_para_addr_rea to i32" [../pingpang/neuron.cpp:141]   --->   Operation 167 'trunc' 'tmp_10' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 168 [1/1] (0.00ns)   --->   "%P20_s = bitcast i32 %tmp_10 to float" [../pingpang/neuron.cpp:141]   --->   Operation 168 'bitcast' 'P20_s' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 169 [1/1] (0.00ns)   --->   "%tmp_s = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %stable_para_addr_rea, i32 32, i32 63)" [../pingpang/neuron.cpp:142]   --->   Operation 169 'partselect' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 170 [1/1] (0.00ns)   --->   "%P22_s = bitcast i32 %tmp_s to float" [../pingpang/neuron.cpp:142]   --->   Operation 170 'bitcast' 'P22_s' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 171 [1/1] (0.00ns)   --->   "%tmp_34 = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %stable_para_addr_rea, i32 64, i32 95)" [../pingpang/neuron.cpp:143]   --->   Operation 171 'partselect' 'tmp_34' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 172 [1/1] (0.00ns)   --->   "%P21ex_s = bitcast i32 %tmp_34 to float" [../pingpang/neuron.cpp:143]   --->   Operation 172 'bitcast' 'P21ex_s' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 173 [1/1] (0.00ns)   --->   "%tmp_35 = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %stable_para_addr_rea, i32 96, i32 127)" [../pingpang/neuron.cpp:144]   --->   Operation 173 'partselect' 'tmp_35' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 174 [1/1] (0.00ns)   --->   "%P21in_s = bitcast i32 %tmp_35 to float" [../pingpang/neuron.cpp:144]   --->   Operation 174 'bitcast' 'P21in_s' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 175 [1/1] (0.00ns)   --->   "%tmp_36 = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %stable_para_addr_rea, i32 128, i32 159)" [../pingpang/neuron.cpp:145]   --->   Operation 175 'partselect' 'tmp_36' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 176 [1/1] (0.00ns)   --->   "%P11ex_s = bitcast i32 %tmp_36 to float" [../pingpang/neuron.cpp:145]   --->   Operation 176 'bitcast' 'P11ex_s' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 177 [1/1] (0.00ns)   --->   "%tmp_37 = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %stable_para_addr_rea, i32 160, i32 191)" [../pingpang/neuron.cpp:146]   --->   Operation 177 'partselect' 'tmp_37' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 178 [1/1] (0.00ns)   --->   "%P11in_s = bitcast i32 %tmp_37 to float" [../pingpang/neuron.cpp:146]   --->   Operation 178 'bitcast' 'P11in_s' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 179 [1/1] (0.00ns)   --->   "%tmp_38 = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %stable_para_addr_rea, i32 192, i32 223)" [../pingpang/neuron.cpp:147]   --->   Operation 179 'partselect' 'tmp_38' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 180 [1/1] (0.00ns)   --->   "%Theta_s = bitcast i32 %tmp_38 to float" [../pingpang/neuron.cpp:147]   --->   Operation 180 'bitcast' 'Theta_s' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 181 [1/1] (0.00ns)   --->   "%tmp_39 = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %stable_para_addr_rea, i32 224, i32 255)" [../pingpang/neuron.cpp:148]   --->   Operation 181 'partselect' 'tmp_39' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 182 [1/1] (0.00ns)   --->   "%RefractoryCounts_s = bitcast i32 %tmp_39 to float" [../pingpang/neuron.cpp:148]   --->   Operation 182 'bitcast' 'RefractoryCounts_s' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 183 [1/1] (0.00ns)   --->   "%tmp_40 = call i32 @_ssdm_op_PartSelect.i32.i512.i32.i32(i512 %stable_para_addr_rea, i32 256, i32 287)" [../pingpang/neuron.cpp:149]   --->   Operation 183 'partselect' 'tmp_40' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 184 [1/1] (0.00ns)   --->   "%V_reset_s = bitcast i32 %tmp_40 to float" [../pingpang/neuron.cpp:149]   --->   Operation 184 'bitcast' 'V_reset_s' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 185 [1/1] (0.00ns)   --->   "%time_cast = sext i30 %time_s to i31" [../pingpang/neuron.cpp:189]   --->   Operation 185 'sext' 'time_cast' <Predicate = true> <Delay = 0.00>
+ST_11 : Operation 186 [1/1] (0.99ns)   --->   "%time_1 = add i31 1, %time_cast" [../pingpang/neuron.cpp:193]   --->   Operation 186 'add' 'time_1' <Predicate = (!tmp)> <Delay = 0.99> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 187 [1/1] (0.41ns)   --->   "%time_2 = select i1 %tmp, i31 %time_cast, i31 %time_1" [../pingpang/neuron.cpp:191]   --->   Operation 187 'select' 'time_2' <Predicate = true> <Delay = 0.41> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.41> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_11 : Operation 188 [1/1] (1.00ns)   --->   "%tmp_6 = add i31 -1, %time_2" [../pingpang/neuron.cpp:228]   --->   Operation 188 'add' 'tmp_6' <Predicate = true> <Delay = 1.00> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_11 : Operation 189 [1/1] (0.65ns)   --->   "store i256 %V_m_s, i256* %V_m_1" [../pingpang/neuron.cpp:153]   --->   Operation 189 'store' <Predicate = true> <Delay = 0.65>
+ST_11 : Operation 190 [1/1] (0.65ns)   --->   "store i256 %r_ref_s, i256* %r_ref_1" [../pingpang/neuron.cpp:152]   --->   Operation 190 'store' <Predicate = true> <Delay = 0.65>
+ST_11 : Operation 191 [1/1] (0.65ns)   --->   "store i256 %i_syn_in_s, i256* %i_syn_in_1" [../pingpang/neuron.cpp:152]   --->   Operation 191 'store' <Predicate = true> <Delay = 0.65>
+ST_11 : Operation 192 [1/1] (0.65ns)   --->   "store i256 %i_syn_ex_s, i256* %i_syn_ex_1" [../pingpang/neuron.cpp:152]   --->   Operation 192 'store' <Predicate = true> <Delay = 0.65>
+ST_11 : Operation 193 [1/1] (0.65ns)   --->   "store i256 %I_e_s, i256* %I_e_1" [../pingpang/neuron.cpp:152]   --->   Operation 193 'store' <Predicate = true> <Delay = 0.65>
+ST_11 : Operation 194 [1/1] (0.65ns)   --->   "store i256 %weighted_spikes_in_s, i256* %weighted_spikes_in_1" [../pingpang/neuron.cpp:152]   --->   Operation 194 'store' <Predicate = true> <Delay = 0.65>
+ST_11 : Operation 195 [1/1] (0.65ns)   --->   "store i256 %weighted_spikes_ex_s, i256* %weighted_spikes_ex_1" [../pingpang/neuron.cpp:152]   --->   Operation 195 'store' <Predicate = true> <Delay = 0.65>
+ST_11 : Operation 196 [1/1] (0.65ns)   --->   "br label %1" [../pingpang/neuron.cpp:195]   --->   Operation 196 'br' <Predicate = true> <Delay = 0.65>
+
+State 12 <SV = 11> <Delay = 1.28>
+ST_12 : Operation 197 [1/1] (0.00ns)   --->   "%i = phi i30 [ 0, %0 ], [ %i_1, %._crit_edge11 ]"   --->   Operation 197 'phi' 'i' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 198 [1/1] (0.00ns)   --->   "%i_cast = zext i30 %i to i31" [../pingpang/neuron.cpp:195]   --->   Operation 198 'zext' 'i_cast' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 199 [1/1] (0.99ns)   --->   "%tmp_8 = icmp slt i31 %i_cast, %time_2" [../pingpang/neuron.cpp:195]   --->   Operation 199 'icmp' 'tmp_8' <Predicate = true> <Delay = 0.99> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 200 [1/1] (0.99ns)   --->   "%p_not = icmp ne i31 %i_cast, %tmp_6" [../pingpang/neuron.cpp:228]   --->   Operation 200 'icmp' 'p_not' <Predicate = (tmp_8)> <Delay = 0.99> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 201 [1/1] (0.28ns)   --->   "%brmerge = or i1 %p_not, %icmp" [../pingpang/neuron.cpp:228]   --->   Operation 201 'or' 'brmerge' <Predicate = (tmp_8)> <Delay = 0.28> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 202 [1/1] (0.00ns)   --->   "br i1 %brmerge, label %._crit_edge3, label %7" [../pingpang/neuron.cpp:228]   --->   Operation 202 'br' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_12 : Operation 203 [1/1] (0.99ns)   --->   "%tmp_14 = icmp eq i31 %i_cast, %tmp_6" [../pingpang/neuron.cpp:239]   --->   Operation 203 'icmp' 'tmp_14' <Predicate = (tmp_8)> <Delay = 0.99> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 204 [1/1] (0.00ns)   --->   "br i1 %tmp_14, label %10, label %._crit_edge6" [../pingpang/neuron.cpp:239]   --->   Operation 204 'br' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_12 : Operation 205 [1/1] (0.00ns)   --->   "br i1 %tmp_14, label %13, label %._crit_edge9" [../pingpang/neuron.cpp:250]   --->   Operation 205 'br' <Predicate = (tmp_8)> <Delay = 0.00>
+
+State 13 <SV = 12> <Delay = 1.60>
+ST_13 : Operation 206 [1/1] (0.99ns)   --->   "%i_1 = add i30 %i, 1" [../pingpang/neuron.cpp:195]   --->   Operation 206 'add' 'i_1' <Predicate = true> <Delay = 0.99> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_13 : Operation 207 [9/9] (1.60ns)   --->   "%tmp_43 = call fastcc { i256, i256, i256, i256, i256, i256, i256 } @update_indata(i30 %i, i1024* %input01, i25 %input00_V3, i1024* %input00, i25 %input01_V5)" [../pingpang/neuron.cpp:195]   --->   Operation 207 'call' 'tmp_43' <Predicate = (tmp_8)> <Delay = 1.60> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 14 <SV = 13> <Delay = 8.75>
+ST_14 : Operation 208 [8/9] (8.75ns)   --->   "%tmp_43 = call fastcc { i256, i256, i256, i256, i256, i256, i256 } @update_indata(i30 %i, i1024* %input01, i25 %input00_V3, i1024* %input00, i25 %input01_V5)" [../pingpang/neuron.cpp:195]   --->   Operation 208 'call' 'tmp_43' <Predicate = (tmp_8)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 15 <SV = 14> <Delay = 8.75>
+ST_15 : Operation 209 [7/9] (8.75ns)   --->   "%tmp_43 = call fastcc { i256, i256, i256, i256, i256, i256, i256 } @update_indata(i30 %i, i1024* %input01, i25 %input00_V3, i1024* %input00, i25 %input01_V5)" [../pingpang/neuron.cpp:195]   --->   Operation 209 'call' 'tmp_43' <Predicate = (tmp_8)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 16 <SV = 15> <Delay = 8.75>
+ST_16 : Operation 210 [6/9] (8.75ns)   --->   "%tmp_43 = call fastcc { i256, i256, i256, i256, i256, i256, i256 } @update_indata(i30 %i, i1024* %input01, i25 %input00_V3, i1024* %input00, i25 %input01_V5)" [../pingpang/neuron.cpp:195]   --->   Operation 210 'call' 'tmp_43' <Predicate = (tmp_8)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 17 <SV = 16> <Delay = 8.75>
+ST_17 : Operation 211 [5/9] (8.75ns)   --->   "%tmp_43 = call fastcc { i256, i256, i256, i256, i256, i256, i256 } @update_indata(i30 %i, i1024* %input01, i25 %input00_V3, i1024* %input00, i25 %input01_V5)" [../pingpang/neuron.cpp:195]   --->   Operation 211 'call' 'tmp_43' <Predicate = (tmp_8)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 18 <SV = 17> <Delay = 8.75>
+ST_18 : Operation 212 [4/9] (8.75ns)   --->   "%tmp_43 = call fastcc { i256, i256, i256, i256, i256, i256, i256 } @update_indata(i30 %i, i1024* %input01, i25 %input00_V3, i1024* %input00, i25 %input01_V5)" [../pingpang/neuron.cpp:195]   --->   Operation 212 'call' 'tmp_43' <Predicate = (tmp_8)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 19 <SV = 18> <Delay = 8.75>
+ST_19 : Operation 213 [3/9] (8.75ns)   --->   "%tmp_43 = call fastcc { i256, i256, i256, i256, i256, i256, i256 } @update_indata(i30 %i, i1024* %input01, i25 %input00_V3, i1024* %input00, i25 %input01_V5)" [../pingpang/neuron.cpp:195]   --->   Operation 213 'call' 'tmp_43' <Predicate = (tmp_8)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 20 <SV = 19> <Delay = 8.75>
+ST_20 : Operation 214 [1/1] (0.00ns)   --->   "%tmp_41 = trunc i30 %i to i1" [../pingpang/neuron.cpp:195]   --->   Operation 214 'trunc' 'tmp_41' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_20 : Operation 215 [2/9] (8.75ns)   --->   "%tmp_43 = call fastcc { i256, i256, i256, i256, i256, i256, i256 } @update_indata(i30 %i, i1024* %input01, i25 %input00_V3, i1024* %input00, i25 %input01_V5)" [../pingpang/neuron.cpp:195]   --->   Operation 215 'call' 'tmp_43' <Predicate = (tmp_8)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_20 : Operation 216 [1/1] (0.00ns)   --->   "br i1 %tmp_41, label %3, label %4" [../pingpang/neuron.cpp:199]   --->   Operation 216 'br' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_20 : Operation 217 [1/1] (0.00ns)   --->   "%weighted_spikes_ex_2_2 = load i256* %weighted_spikes_ex_2"   --->   Operation 217 'load' 'weighted_spikes_ex_2_2' <Predicate = (tmp_8 & tmp_41)> <Delay = 0.00>
+ST_20 : Operation 218 [1/1] (0.00ns)   --->   "%weighted_spikes_in_2_2 = load i256* %weighted_spikes_in_2"   --->   Operation 218 'load' 'weighted_spikes_in_2_2' <Predicate = (tmp_8 & tmp_41)> <Delay = 0.00>
+ST_20 : Operation 219 [1/1] (0.00ns)   --->   "%I_e_2_load = load i256* %I_e_2"   --->   Operation 219 'load' 'I_e_2_load' <Predicate = (tmp_8 & tmp_41)> <Delay = 0.00>
+ST_20 : Operation 220 [1/1] (0.00ns)   --->   "%i_syn_ex_2_load = load i256* %i_syn_ex_2"   --->   Operation 220 'load' 'i_syn_ex_2_load' <Predicate = (tmp_8 & tmp_41)> <Delay = 0.00>
+ST_20 : Operation 221 [1/1] (0.00ns)   --->   "%i_syn_in_2_load = load i256* %i_syn_in_2"   --->   Operation 221 'load' 'i_syn_in_2_load' <Predicate = (tmp_8 & tmp_41)> <Delay = 0.00>
+ST_20 : Operation 222 [1/1] (0.00ns)   --->   "%r_ref_2_load = load i256* %r_ref_2"   --->   Operation 222 'load' 'r_ref_2_load' <Predicate = (tmp_8 & tmp_41)> <Delay = 0.00>
+ST_20 : Operation 223 [1/1] (0.00ns)   --->   "%V_m_2_load = load i256* %V_m_2"   --->   Operation 223 'load' 'V_m_2_load' <Predicate = (tmp_8 & tmp_41)> <Delay = 0.00>
+ST_20 : Operation 224 [12/12] (4.42ns)   --->   "%call_ret4 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_2_2, i256 %weighted_spikes_in_2_2, i256 %I_e_2_load, i256 %i_syn_ex_2_load, i256 %i_syn_in_2_load, i256 %r_ref_2_load, i256 %V_m_2_load)" [../pingpang/neuron.cpp:195]   --->   Operation 224 'call' 'call_ret4' <Predicate = (tmp_8 & tmp_41)> <Delay = 4.42> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 21 <SV = 20> <Delay = 8.75>
+ST_21 : Operation 225 [1/1] (0.00ns)   --->   "%tmp_42 = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str13)" [../pingpang/neuron.cpp:196]   --->   Operation 225 'specregionbegin' 'tmp_42' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_21 : Operation 226 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopTripCount(i32 0, i32 56250, i32 0, [1 x i8]* @p_str) nounwind" [../pingpang/neuron.cpp:197]   --->   Operation 226 'speclooptripcount' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_21 : Operation 227 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str) nounwind" [../pingpang/neuron.cpp:198]   --->   Operation 227 'specpipeline' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_21 : Operation 228 [1/9] (8.75ns)   --->   "%tmp_43 = call fastcc { i256, i256, i256, i256, i256, i256, i256 } @update_indata(i30 %i, i1024* %input01, i25 %input00_V3, i1024* %input00, i25 %input01_V5)" [../pingpang/neuron.cpp:195]   --->   Operation 228 'call' 'tmp_43' <Predicate = (tmp_8)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_21 : Operation 229 [1/1] (0.00ns)   --->   "%weighted_spikes_ex_3 = extractvalue { i256, i256, i256, i256, i256, i256, i256 } %tmp_43, 0" [../pingpang/neuron.cpp:195]   --->   Operation 229 'extractvalue' 'weighted_spikes_ex_3' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_21 : Operation 230 [1/1] (0.00ns)   --->   "%weighted_spikes_in_3 = extractvalue { i256, i256, i256, i256, i256, i256, i256 } %tmp_43, 1" [../pingpang/neuron.cpp:195]   --->   Operation 230 'extractvalue' 'weighted_spikes_in_3' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_21 : Operation 231 [1/1] (0.00ns)   --->   "%I_e_3 = extractvalue { i256, i256, i256, i256, i256, i256, i256 } %tmp_43, 2" [../pingpang/neuron.cpp:195]   --->   Operation 231 'extractvalue' 'I_e_3' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_21 : Operation 232 [1/1] (0.00ns)   --->   "%i_syn_ex_3 = extractvalue { i256, i256, i256, i256, i256, i256, i256 } %tmp_43, 3" [../pingpang/neuron.cpp:195]   --->   Operation 232 'extractvalue' 'i_syn_ex_3' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_21 : Operation 233 [1/1] (0.00ns)   --->   "%i_syn_in_3 = extractvalue { i256, i256, i256, i256, i256, i256, i256 } %tmp_43, 4" [../pingpang/neuron.cpp:195]   --->   Operation 233 'extractvalue' 'i_syn_in_3' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_21 : Operation 234 [1/1] (0.00ns)   --->   "%r_ref_3 = extractvalue { i256, i256, i256, i256, i256, i256, i256 } %tmp_43, 5" [../pingpang/neuron.cpp:195]   --->   Operation 234 'extractvalue' 'r_ref_3' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_21 : Operation 235 [1/1] (0.00ns)   --->   "%V_m_3 = extractvalue { i256, i256, i256, i256, i256, i256, i256 } %tmp_43, 6" [../pingpang/neuron.cpp:195]   --->   Operation 235 'extractvalue' 'V_m_3' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_21 : Operation 236 [1/1] (0.00ns)   --->   "%weighted_spikes_ex_s_16 = load i256* %weighted_spikes_ex_1"   --->   Operation 236 'load' 'weighted_spikes_ex_s_16' <Predicate = (tmp_8 & !tmp_41)> <Delay = 0.00>
+ST_21 : Operation 237 [1/1] (0.00ns)   --->   "%weighted_spikes_in_s_17 = load i256* %weighted_spikes_in_1"   --->   Operation 237 'load' 'weighted_spikes_in_s_17' <Predicate = (tmp_8 & !tmp_41)> <Delay = 0.00>
+ST_21 : Operation 238 [1/1] (0.00ns)   --->   "%I_e_1_load = load i256* %I_e_1"   --->   Operation 238 'load' 'I_e_1_load' <Predicate = (tmp_8 & !tmp_41)> <Delay = 0.00>
+ST_21 : Operation 239 [1/1] (0.00ns)   --->   "%i_syn_ex_1_load = load i256* %i_syn_ex_1"   --->   Operation 239 'load' 'i_syn_ex_1_load' <Predicate = (tmp_8 & !tmp_41)> <Delay = 0.00>
+ST_21 : Operation 240 [1/1] (0.00ns)   --->   "%i_syn_in_1_load = load i256* %i_syn_in_1"   --->   Operation 240 'load' 'i_syn_in_1_load' <Predicate = (tmp_8 & !tmp_41)> <Delay = 0.00>
+ST_21 : Operation 241 [1/1] (0.00ns)   --->   "%r_ref_1_load = load i256* %r_ref_1"   --->   Operation 241 'load' 'r_ref_1_load' <Predicate = (tmp_8 & !tmp_41)> <Delay = 0.00>
+ST_21 : Operation 242 [1/1] (0.00ns)   --->   "%V_m_1_load = load i256* %V_m_1"   --->   Operation 242 'load' 'V_m_1_load' <Predicate = (tmp_8 & !tmp_41)> <Delay = 0.00>
+ST_21 : Operation 243 [12/12] (4.42ns)   --->   "%call_ret2 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_s_16, i256 %weighted_spikes_in_s_17, i256 %I_e_1_load, i256 %i_syn_ex_1_load, i256 %i_syn_in_1_load, i256 %r_ref_1_load, i256 %V_m_1_load)" [../pingpang/neuron.cpp:195]   --->   Operation 243 'call' 'call_ret2' <Predicate = (tmp_8 & !tmp_41)> <Delay = 4.42> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_21 : Operation 244 [1/1] (0.00ns)   --->   "store i256 %V_m_3, i256* %V_m_2" [../pingpang/neuron.cpp:176]   --->   Operation 244 'store' <Predicate = (tmp_8 & !tmp_41)> <Delay = 0.00>
+ST_21 : Operation 245 [1/1] (0.00ns)   --->   "store i256 %r_ref_3, i256* %r_ref_2" [../pingpang/neuron.cpp:175]   --->   Operation 245 'store' <Predicate = (tmp_8 & !tmp_41)> <Delay = 0.00>
+ST_21 : Operation 246 [1/1] (0.00ns)   --->   "store i256 %i_syn_in_3, i256* %i_syn_in_2" [../pingpang/neuron.cpp:175]   --->   Operation 246 'store' <Predicate = (tmp_8 & !tmp_41)> <Delay = 0.00>
+ST_21 : Operation 247 [1/1] (0.00ns)   --->   "store i256 %i_syn_ex_3, i256* %i_syn_ex_2" [../pingpang/neuron.cpp:175]   --->   Operation 247 'store' <Predicate = (tmp_8 & !tmp_41)> <Delay = 0.00>
+ST_21 : Operation 248 [1/1] (0.00ns)   --->   "store i256 %I_e_3, i256* %I_e_2" [../pingpang/neuron.cpp:175]   --->   Operation 248 'store' <Predicate = (tmp_8 & !tmp_41)> <Delay = 0.00>
+ST_21 : Operation 249 [1/1] (0.00ns)   --->   "store i256 %weighted_spikes_in_3, i256* %weighted_spikes_in_2" [../pingpang/neuron.cpp:175]   --->   Operation 249 'store' <Predicate = (tmp_8 & !tmp_41)> <Delay = 0.00>
+ST_21 : Operation 250 [1/1] (0.00ns)   --->   "store i256 %weighted_spikes_ex_3, i256* %weighted_spikes_ex_2" [../pingpang/neuron.cpp:175]   --->   Operation 250 'store' <Predicate = (tmp_8 & !tmp_41)> <Delay = 0.00>
+ST_21 : Operation 251 [11/12] (8.75ns)   --->   "%call_ret4 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_2_2, i256 %weighted_spikes_in_2_2, i256 %I_e_2_load, i256 %i_syn_ex_2_load, i256 %i_syn_in_2_load, i256 %r_ref_2_load, i256 %V_m_2_load)" [../pingpang/neuron.cpp:195]   --->   Operation 251 'call' 'call_ret4' <Predicate = (tmp_8 & tmp_41)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 22 <SV = 21> <Delay = 8.75>
+ST_22 : Operation 252 [11/12] (8.75ns)   --->   "%call_ret2 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_s_16, i256 %weighted_spikes_in_s_17, i256 %I_e_1_load, i256 %i_syn_ex_1_load, i256 %i_syn_in_1_load, i256 %r_ref_1_load, i256 %V_m_1_load)" [../pingpang/neuron.cpp:195]   --->   Operation 252 'call' 'call_ret2' <Predicate = (tmp_8 & !tmp_41)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_22 : Operation 253 [10/12] (8.75ns)   --->   "%call_ret4 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_2_2, i256 %weighted_spikes_in_2_2, i256 %I_e_2_load, i256 %i_syn_ex_2_load, i256 %i_syn_in_2_load, i256 %r_ref_2_load, i256 %V_m_2_load)" [../pingpang/neuron.cpp:195]   --->   Operation 253 'call' 'call_ret4' <Predicate = (tmp_8 & tmp_41)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_22 : Operation 254 [1/1] (0.65ns)   --->   "store i256 %V_m_3, i256* %V_m_1" [../pingpang/neuron.cpp:153]   --->   Operation 254 'store' <Predicate = (tmp_8 & tmp_41)> <Delay = 0.65>
+ST_22 : Operation 255 [1/1] (0.65ns)   --->   "store i256 %r_ref_3, i256* %r_ref_1" [../pingpang/neuron.cpp:152]   --->   Operation 255 'store' <Predicate = (tmp_8 & tmp_41)> <Delay = 0.65>
+ST_22 : Operation 256 [1/1] (0.65ns)   --->   "store i256 %i_syn_in_3, i256* %i_syn_in_1" [../pingpang/neuron.cpp:152]   --->   Operation 256 'store' <Predicate = (tmp_8 & tmp_41)> <Delay = 0.65>
+ST_22 : Operation 257 [1/1] (0.65ns)   --->   "store i256 %i_syn_ex_3, i256* %i_syn_ex_1" [../pingpang/neuron.cpp:152]   --->   Operation 257 'store' <Predicate = (tmp_8 & tmp_41)> <Delay = 0.65>
+ST_22 : Operation 258 [1/1] (0.65ns)   --->   "store i256 %I_e_3, i256* %I_e_1" [../pingpang/neuron.cpp:152]   --->   Operation 258 'store' <Predicate = (tmp_8 & tmp_41)> <Delay = 0.65>
+ST_22 : Operation 259 [1/1] (0.65ns)   --->   "store i256 %weighted_spikes_in_3, i256* %weighted_spikes_in_1" [../pingpang/neuron.cpp:152]   --->   Operation 259 'store' <Predicate = (tmp_8 & tmp_41)> <Delay = 0.65>
+ST_22 : Operation 260 [1/1] (0.65ns)   --->   "store i256 %weighted_spikes_ex_3, i256* %weighted_spikes_ex_1" [../pingpang/neuron.cpp:152]   --->   Operation 260 'store' <Predicate = (tmp_8 & tmp_41)> <Delay = 0.65>
+
+State 23 <SV = 22> <Delay = 8.75>
+ST_23 : Operation 261 [10/12] (8.75ns)   --->   "%call_ret2 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_s_16, i256 %weighted_spikes_in_s_17, i256 %I_e_1_load, i256 %i_syn_ex_1_load, i256 %i_syn_in_1_load, i256 %r_ref_1_load, i256 %V_m_1_load)" [../pingpang/neuron.cpp:195]   --->   Operation 261 'call' 'call_ret2' <Predicate = (tmp_8 & !tmp_41)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_23 : Operation 262 [9/12] (8.75ns)   --->   "%call_ret4 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_2_2, i256 %weighted_spikes_in_2_2, i256 %I_e_2_load, i256 %i_syn_ex_2_load, i256 %i_syn_in_2_load, i256 %r_ref_2_load, i256 %V_m_2_load)" [../pingpang/neuron.cpp:195]   --->   Operation 262 'call' 'call_ret4' <Predicate = (tmp_8 & tmp_41)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 24 <SV = 23> <Delay = 8.75>
+ST_24 : Operation 263 [9/12] (8.75ns)   --->   "%call_ret2 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_s_16, i256 %weighted_spikes_in_s_17, i256 %I_e_1_load, i256 %i_syn_ex_1_load, i256 %i_syn_in_1_load, i256 %r_ref_1_load, i256 %V_m_1_load)" [../pingpang/neuron.cpp:195]   --->   Operation 263 'call' 'call_ret2' <Predicate = (tmp_8 & !tmp_41)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_24 : Operation 264 [8/12] (8.75ns)   --->   "%call_ret4 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_2_2, i256 %weighted_spikes_in_2_2, i256 %I_e_2_load, i256 %i_syn_ex_2_load, i256 %i_syn_in_2_load, i256 %r_ref_2_load, i256 %V_m_2_load)" [../pingpang/neuron.cpp:195]   --->   Operation 264 'call' 'call_ret4' <Predicate = (tmp_8 & tmp_41)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 25 <SV = 24> <Delay = 8.75>
+ST_25 : Operation 265 [8/12] (8.75ns)   --->   "%call_ret2 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_s_16, i256 %weighted_spikes_in_s_17, i256 %I_e_1_load, i256 %i_syn_ex_1_load, i256 %i_syn_in_1_load, i256 %r_ref_1_load, i256 %V_m_1_load)" [../pingpang/neuron.cpp:195]   --->   Operation 265 'call' 'call_ret2' <Predicate = (tmp_8 & !tmp_41)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_25 : Operation 266 [7/12] (8.75ns)   --->   "%call_ret4 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_2_2, i256 %weighted_spikes_in_2_2, i256 %I_e_2_load, i256 %i_syn_ex_2_load, i256 %i_syn_in_2_load, i256 %r_ref_2_load, i256 %V_m_2_load)" [../pingpang/neuron.cpp:195]   --->   Operation 266 'call' 'call_ret4' <Predicate = (tmp_8 & tmp_41)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 26 <SV = 25> <Delay = 8.75>
+ST_26 : Operation 267 [7/12] (8.75ns)   --->   "%call_ret2 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_s_16, i256 %weighted_spikes_in_s_17, i256 %I_e_1_load, i256 %i_syn_ex_1_load, i256 %i_syn_in_1_load, i256 %r_ref_1_load, i256 %V_m_1_load)" [../pingpang/neuron.cpp:195]   --->   Operation 267 'call' 'call_ret2' <Predicate = (tmp_8 & !tmp_41)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_26 : Operation 268 [6/12] (8.75ns)   --->   "%call_ret4 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_2_2, i256 %weighted_spikes_in_2_2, i256 %I_e_2_load, i256 %i_syn_ex_2_load, i256 %i_syn_in_2_load, i256 %r_ref_2_load, i256 %V_m_2_load)" [../pingpang/neuron.cpp:195]   --->   Operation 268 'call' 'call_ret4' <Predicate = (tmp_8 & tmp_41)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 27 <SV = 26> <Delay = 8.75>
+ST_27 : Operation 269 [6/12] (8.75ns)   --->   "%call_ret2 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_s_16, i256 %weighted_spikes_in_s_17, i256 %I_e_1_load, i256 %i_syn_ex_1_load, i256 %i_syn_in_1_load, i256 %r_ref_1_load, i256 %V_m_1_load)" [../pingpang/neuron.cpp:195]   --->   Operation 269 'call' 'call_ret2' <Predicate = (tmp_8 & !tmp_41)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_27 : Operation 270 [5/12] (8.75ns)   --->   "%call_ret4 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_2_2, i256 %weighted_spikes_in_2_2, i256 %I_e_2_load, i256 %i_syn_ex_2_load, i256 %i_syn_in_2_load, i256 %r_ref_2_load, i256 %V_m_2_load)" [../pingpang/neuron.cpp:195]   --->   Operation 270 'call' 'call_ret4' <Predicate = (tmp_8 & tmp_41)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 28 <SV = 27> <Delay = 8.75>
+ST_28 : Operation 271 [5/12] (8.75ns)   --->   "%call_ret2 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_s_16, i256 %weighted_spikes_in_s_17, i256 %I_e_1_load, i256 %i_syn_ex_1_load, i256 %i_syn_in_1_load, i256 %r_ref_1_load, i256 %V_m_1_load)" [../pingpang/neuron.cpp:195]   --->   Operation 271 'call' 'call_ret2' <Predicate = (tmp_8 & !tmp_41)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_28 : Operation 272 [4/12] (8.75ns)   --->   "%call_ret4 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_2_2, i256 %weighted_spikes_in_2_2, i256 %I_e_2_load, i256 %i_syn_ex_2_load, i256 %i_syn_in_2_load, i256 %r_ref_2_load, i256 %V_m_2_load)" [../pingpang/neuron.cpp:195]   --->   Operation 272 'call' 'call_ret4' <Predicate = (tmp_8 & tmp_41)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 29 <SV = 28> <Delay = 8.75>
+ST_29 : Operation 273 [4/12] (8.75ns)   --->   "%call_ret2 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_s_16, i256 %weighted_spikes_in_s_17, i256 %I_e_1_load, i256 %i_syn_ex_1_load, i256 %i_syn_in_1_load, i256 %r_ref_1_load, i256 %V_m_1_load)" [../pingpang/neuron.cpp:195]   --->   Operation 273 'call' 'call_ret2' <Predicate = (tmp_8 & !tmp_41)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_29 : Operation 274 [3/12] (8.75ns)   --->   "%call_ret4 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_2_2, i256 %weighted_spikes_in_2_2, i256 %I_e_2_load, i256 %i_syn_ex_2_load, i256 %i_syn_in_2_load, i256 %r_ref_2_load, i256 %V_m_2_load)" [../pingpang/neuron.cpp:195]   --->   Operation 274 'call' 'call_ret4' <Predicate = (tmp_8 & tmp_41)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 30 <SV = 29> <Delay = 8.75>
+ST_30 : Operation 275 [3/12] (8.75ns)   --->   "%call_ret2 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_s_16, i256 %weighted_spikes_in_s_17, i256 %I_e_1_load, i256 %i_syn_ex_1_load, i256 %i_syn_in_1_load, i256 %r_ref_1_load, i256 %V_m_1_load)" [../pingpang/neuron.cpp:195]   --->   Operation 275 'call' 'call_ret2' <Predicate = (tmp_8 & !tmp_41)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_30 : Operation 276 [2/12] (8.75ns)   --->   "%call_ret4 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_2_2, i256 %weighted_spikes_in_2_2, i256 %I_e_2_load, i256 %i_syn_ex_2_load, i256 %i_syn_in_2_load, i256 %r_ref_2_load, i256 %V_m_2_load)" [../pingpang/neuron.cpp:195]   --->   Operation 276 'call' 'call_ret4' <Predicate = (tmp_8 & tmp_41)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 31 <SV = 30> <Delay = 8.75>
+ST_31 : Operation 277 [2/12] (8.75ns)   --->   "%call_ret2 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_s_16, i256 %weighted_spikes_in_s_17, i256 %I_e_1_load, i256 %i_syn_ex_1_load, i256 %i_syn_in_1_load, i256 %r_ref_1_load, i256 %V_m_1_load)" [../pingpang/neuron.cpp:195]   --->   Operation 277 'call' 'call_ret2' <Predicate = (tmp_8 & !tmp_41)> <Delay = 8.75> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_31 : Operation 278 [1/12] (6.88ns)   --->   "%call_ret4 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_2_2, i256 %weighted_spikes_in_2_2, i256 %I_e_2_load, i256 %i_syn_ex_2_load, i256 %i_syn_in_2_load, i256 %r_ref_2_load, i256 %V_m_2_load)" [../pingpang/neuron.cpp:195]   --->   Operation 278 'call' 'call_ret4' <Predicate = (tmp_8 & tmp_41)> <Delay = 6.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_31 : Operation 279 [1/1] (0.00ns)   --->   "%V_m_r = extractvalue { i256, i256, i256, i256, i256, i256 } %call_ret4, 0" [../pingpang/neuron.cpp:195]   --->   Operation 279 'extractvalue' 'V_m_r' <Predicate = (tmp_8 & tmp_41)> <Delay = 0.00>
+ST_31 : Operation 280 [1/1] (0.00ns)   --->   "%i_syn_ex_rr_2 = extractvalue { i256, i256, i256, i256, i256, i256 } %call_ret4, 1" [../pingpang/neuron.cpp:195]   --->   Operation 280 'extractvalue' 'i_syn_ex_rr_2' <Predicate = (tmp_8 & tmp_41)> <Delay = 0.00>
+ST_31 : Operation 281 [1/1] (0.00ns)   --->   "%i_syn_in_rr_2 = extractvalue { i256, i256, i256, i256, i256, i256 } %call_ret4, 2" [../pingpang/neuron.cpp:195]   --->   Operation 281 'extractvalue' 'i_syn_in_rr_2' <Predicate = (tmp_8 & tmp_41)> <Delay = 0.00>
+ST_31 : Operation 282 [1/1] (0.00ns)   --->   "%r_ref_r = extractvalue { i256, i256, i256, i256, i256, i256 } %call_ret4, 3" [../pingpang/neuron.cpp:195]   --->   Operation 282 'extractvalue' 'r_ref_r' <Predicate = (tmp_8 & tmp_41)> <Delay = 0.00>
+ST_31 : Operation 283 [1/1] (0.00ns)   --->   "%signal_s = extractvalue { i256, i256, i256, i256, i256, i256 } %call_ret4, 4" [../pingpang/neuron.cpp:195]   --->   Operation 283 'extractvalue' 'signal_s' <Predicate = (tmp_8 & tmp_41)> <Delay = 0.00>
+ST_31 : Operation 284 [1/1] (0.00ns)   --->   "%signal_1 = extractvalue { i256, i256, i256, i256, i256, i256 } %call_ret4, 5" [../pingpang/neuron.cpp:195]   --->   Operation 284 'extractvalue' 'signal_1' <Predicate = (tmp_8 & tmp_41)> <Delay = 0.00>
+ST_31 : Operation 285 [1/1] (0.65ns)   --->   "br label %5" [../pingpang/neuron.cpp:210]   --->   Operation 285 'br' <Predicate = (tmp_8 & tmp_41)> <Delay = 0.65>
+
+State 32 <SV = 31> <Delay = 6.88>
+ST_32 : Operation 286 [1/12] (6.88ns)   --->   "%call_ret2 = call fastcc { i256, i256, i256, i256, i256, i256 } @execute(i30 %i, float %P20_s, float %P22_s, float %P11ex_s, float %P11in_s, float %P21ex_s, float %P21in_s, float %Theta_s, float %RefractoryCounts_s, float %V_reset_s, i256 %weighted_spikes_ex_s_16, i256 %weighted_spikes_in_s_17, i256 %I_e_1_load, i256 %i_syn_ex_1_load, i256 %i_syn_in_1_load, i256 %r_ref_1_load, i256 %V_m_1_load)" [../pingpang/neuron.cpp:195]   --->   Operation 286 'call' 'call_ret2' <Predicate = (tmp_8 & !tmp_41)> <Delay = 6.88> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_32 : Operation 287 [1/1] (0.00ns)   --->   "%V_m_r_2 = extractvalue { i256, i256, i256, i256, i256, i256 } %call_ret2, 0" [../pingpang/neuron.cpp:195]   --->   Operation 287 'extractvalue' 'V_m_r_2' <Predicate = (tmp_8 & !tmp_41)> <Delay = 0.00>
+ST_32 : Operation 288 [1/1] (0.00ns)   --->   "%i_syn_ex_rr = extractvalue { i256, i256, i256, i256, i256, i256 } %call_ret2, 1" [../pingpang/neuron.cpp:195]   --->   Operation 288 'extractvalue' 'i_syn_ex_rr' <Predicate = (tmp_8 & !tmp_41)> <Delay = 0.00>
+ST_32 : Operation 289 [1/1] (0.00ns)   --->   "%i_syn_in_rr = extractvalue { i256, i256, i256, i256, i256, i256 } %call_ret2, 2" [../pingpang/neuron.cpp:195]   --->   Operation 289 'extractvalue' 'i_syn_in_rr' <Predicate = (tmp_8 & !tmp_41)> <Delay = 0.00>
+ST_32 : Operation 290 [1/1] (0.00ns)   --->   "%r_ref_r_2 = extractvalue { i256, i256, i256, i256, i256, i256 } %call_ret2, 3" [../pingpang/neuron.cpp:195]   --->   Operation 290 'extractvalue' 'r_ref_r_2' <Predicate = (tmp_8 & !tmp_41)> <Delay = 0.00>
+ST_32 : Operation 291 [1/1] (0.00ns)   --->   "%signal_2 = extractvalue { i256, i256, i256, i256, i256, i256 } %call_ret2, 4" [../pingpang/neuron.cpp:195]   --->   Operation 291 'extractvalue' 'signal_2' <Predicate = (tmp_8 & !tmp_41)> <Delay = 0.00>
+ST_32 : Operation 292 [1/1] (0.00ns)   --->   "%signal_1_2 = extractvalue { i256, i256, i256, i256, i256, i256 } %call_ret2, 5" [../pingpang/neuron.cpp:195]   --->   Operation 292 'extractvalue' 'signal_1_2' <Predicate = (tmp_8 & !tmp_41)> <Delay = 0.00>
+ST_32 : Operation 293 [1/1] (0.65ns)   --->   "br label %5"   --->   Operation 293 'br' <Predicate = (tmp_8 & !tmp_41)> <Delay = 0.65>
+
+State 33 <SV = 32> <Delay = 4.37>
+ST_33 : Operation 294 [1/1] (0.00ns)   --->   "%num_o = phi i256 [ 79228162532711081671548469249, %0 ], [ %num_o_7, %._crit_edge11 ]" [../pingpang/neuron.cpp:242]   --->   Operation 294 'phi' 'num_o' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 295 [1/1] (0.00ns)   --->   "br i1 %tmp_8, label %2, label %16" [../pingpang/neuron.cpp:195]   --->   Operation 295 'br' <Predicate = true> <Delay = 0.00>
+ST_33 : Operation 296 [1/1] (0.00ns)   --->   "%signal_1_1 = phi i256 [ %signal_1_2, %4 ], [ %signal_1, %3 ]"   --->   Operation 296 'phi' 'signal_1_1' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_33 : Operation 297 [1/1] (0.00ns)   --->   "%signal_1_18 = phi i256 [ %signal_2, %4 ], [ %signal_s, %3 ]"   --->   Operation 297 'phi' 'signal_1_18' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_33 : Operation 298 [1/1] (0.00ns)   --->   "%r_ref_r_1 = phi i256 [ %r_ref_r_2, %4 ], [ %r_ref_r, %3 ]"   --->   Operation 298 'phi' 'r_ref_r_1' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_33 : Operation 299 [1/1] (0.00ns)   --->   "%i_syn_in_rr_1 = phi i256 [ %i_syn_in_rr, %4 ], [ %i_syn_in_rr_2, %3 ]"   --->   Operation 299 'phi' 'i_syn_in_rr_1' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_33 : Operation 300 [1/1] (0.00ns)   --->   "%i_syn_ex_rr_1 = phi i256 [ %i_syn_ex_rr, %4 ], [ %i_syn_ex_rr_2, %3 ]"   --->   Operation 300 'phi' 'i_syn_ex_rr_1' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_33 : Operation 301 [1/1] (0.00ns)   --->   "%V_m_r_1 = phi i256 [ %V_m_r_2, %4 ], [ %V_m_r, %3 ]"   --->   Operation 301 'phi' 'V_m_r_1' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_33 : Operation 302 [8/8] (0.94ns)   --->   "call fastcc void @update_outdata(i30 %i, i256 %V_m_r_1, i256 %i_syn_ex_rr_1, i256 %i_syn_in_rr_1, i256 %r_ref_r_1, i1024* %input00, i25 %input01_V5)" [../pingpang/neuron.cpp:195]   --->   Operation 302 'call' <Predicate = (tmp_8)> <Delay = 0.94> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_33 : Operation 303 [1/1] (0.00ns)   --->   "%tmp_48 = trunc i256 %signal_1_18 to i32" [../pingpang/neuron.cpp:222]   --->   Operation 303 'trunc' 'tmp_48' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_33 : Operation 304 [1/1] (0.99ns)   --->   "%tmp_1 = icmp eq i32 %tmp_48, -1" [../pingpang/neuron.cpp:222]   --->   Operation 304 'icmp' 'tmp_1' <Predicate = (tmp_8)> <Delay = 0.99> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 305 [1/1] (0.65ns)   --->   "br i1 %tmp_1, label %._crit_edge, label %6" [../pingpang/neuron.cpp:222]   --->   Operation 305 'br' <Predicate = (tmp_8)> <Delay = 0.65>
+ST_33 : Operation 306 [1/1] (0.00ns)   --->   "%tmp_49 = trunc i256 %signal_1_1 to i32" [../pingpang/neuron.cpp:224]   --->   Operation 306 'trunc' 'tmp_49' <Predicate = (tmp_8 & !tmp_1)> <Delay = 0.00>
+ST_33 : Operation 307 [1/1] (0.00ns)   --->   "%tmp_67 = trunc i256 %num_o to i32" [../pingpang/neuron.cpp:224]   --->   Operation 307 'trunc' 'tmp_67' <Predicate = (tmp_8 & !tmp_1)> <Delay = 0.00>
+ST_33 : Operation 308 [1/1] (0.00ns)   --->   "%tmp_2_cast = sext i32 %tmp_67 to i33" [../pingpang/neuron.cpp:224]   --->   Operation 308 'sext' 'tmp_2_cast' <Predicate = (tmp_8 & !tmp_1)> <Delay = 0.00>
+ST_33 : Operation 309 [1/1] (1.01ns)   --->   "%output0_8_sum = add i33 %tmp_27_cast, %tmp_2_cast" [../pingpang/neuron.cpp:224]   --->   Operation 309 'add' 'output0_8_sum' <Predicate = (tmp_8 & !tmp_1)> <Delay = 1.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 310 [1/1] (0.00ns)   --->   "%output0_8_sum_cast = sext i33 %output0_8_sum to i64" [../pingpang/neuron.cpp:224]   --->   Operation 310 'sext' 'output0_8_sum_cast' <Predicate = (tmp_8 & !tmp_1)> <Delay = 0.00>
+ST_33 : Operation 311 [1/1] (0.00ns)   --->   "%output0_addr_2 = getelementptr i32* %output0_s, i64 %output0_8_sum_cast" [../pingpang/neuron.cpp:224]   --->   Operation 311 'getelementptr' 'output0_addr_2' <Predicate = (tmp_8 & !tmp_1)> <Delay = 0.00>
+ST_33 : Operation 312 [1/1] (1.01ns)   --->   "%tmp_3 = add nsw i32 1, %tmp_67" [../pingpang/neuron.cpp:225]   --->   Operation 312 'add' 'tmp_3' <Predicate = (tmp_8 & !tmp_1)> <Delay = 1.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 313 [1/1] (0.00ns)   --->   "%num_o_2 = call i256 @_ssdm_op_PartSet.i256.i256.i32.i32.i32(i256 %num_o, i32 %tmp_3, i32 0, i32 31)" [../pingpang/neuron.cpp:225]   --->   Operation 313 'partset' 'num_o_2' <Predicate = (tmp_8 & !tmp_1)> <Delay = 0.00>
+ST_33 : Operation 314 [1/1] (0.65ns)   --->   "br label %._crit_edge" [../pingpang/neuron.cpp:226]   --->   Operation 314 'br' <Predicate = (tmp_8 & !tmp_1)> <Delay = 0.65>
+ST_33 : Operation 315 [1/1] (0.00ns)   --->   "%num_o_1 = phi i256 [ %num_o, %5 ], [ %num_o_2, %6 ]"   --->   Operation 315 'phi' 'num_o_1' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_33 : Operation 316 [1/1] (0.00ns)   --->   "%tmp_50 = call i32 @_ssdm_op_PartSelect.i32.i256.i32.i32(i256 %signal_1_18, i32 32, i32 63)" [../pingpang/neuron.cpp:228]   --->   Operation 316 'partselect' 'tmp_50' <Predicate = (tmp_8 & !brmerge)> <Delay = 0.00>
+ST_33 : Operation 317 [1/1] (0.99ns)   --->   "%tmp_4 = icmp eq i32 %tmp_50, -1" [../pingpang/neuron.cpp:228]   --->   Operation 317 'icmp' 'tmp_4' <Predicate = (tmp_8 & !brmerge)> <Delay = 0.99> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 318 [1/1] (0.00ns)   --->   "br i1 %tmp_4, label %._crit_edge3, label %8" [../pingpang/neuron.cpp:228]   --->   Operation 318 'br' <Predicate = (tmp_8 & !brmerge)> <Delay = 0.00>
+ST_33 : Operation 319 [1/1] (0.00ns)   --->   "%tmp_52 = call i32 @_ssdm_op_PartSelect.i32.i256.i32.i32(i256 %signal_1_1, i32 32, i32 63)" [../pingpang/neuron.cpp:230]   --->   Operation 319 'partselect' 'tmp_52' <Predicate = (tmp_8 & !brmerge & !tmp_4)> <Delay = 0.00>
+ST_33 : Operation 320 [1/1] (0.00ns)   --->   "%tmp_53 = call i32 @_ssdm_op_PartSelect.i32.i256.i32.i32(i256 %num_o_1, i32 32, i32 63)" [../pingpang/neuron.cpp:230]   --->   Operation 320 'partselect' 'tmp_53' <Predicate = (tmp_8 & !brmerge & !tmp_4)> <Delay = 0.00>
+ST_33 : Operation 321 [1/1] (0.00ns)   --->   "%tmp_10_cast = sext i32 %tmp_53 to i33" [../pingpang/neuron.cpp:230]   --->   Operation 321 'sext' 'tmp_10_cast' <Predicate = (tmp_8 & !brmerge & !tmp_4)> <Delay = 0.00>
+ST_33 : Operation 322 [1/1] (1.01ns)   --->   "%output1_10_sum = add i33 %tmp_10_cast, %tmp_26_cast" [../pingpang/neuron.cpp:230]   --->   Operation 322 'add' 'output1_10_sum' <Predicate = (tmp_8 & !brmerge & !tmp_4)> <Delay = 1.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 323 [1/1] (0.00ns)   --->   "%output1_10_sum_cast = sext i33 %output1_10_sum to i64" [../pingpang/neuron.cpp:230]   --->   Operation 323 'sext' 'output1_10_sum_cast' <Predicate = (tmp_8 & !brmerge & !tmp_4)> <Delay = 0.00>
+ST_33 : Operation 324 [1/1] (0.00ns)   --->   "%output0_addr_3 = getelementptr i32* %output0_s, i64 %output1_10_sum_cast" [../pingpang/neuron.cpp:230]   --->   Operation 324 'getelementptr' 'output0_addr_3' <Predicate = (tmp_8 & !brmerge & !tmp_4)> <Delay = 0.00>
+ST_33 : Operation 325 [1/1] (1.01ns)   --->   "%tmp_11 = add nsw i32 %tmp_53, 1" [../pingpang/neuron.cpp:231]   --->   Operation 325 'add' 'tmp_11' <Predicate = (tmp_8 & !brmerge & !tmp_4)> <Delay = 1.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 326 [1/1] (0.00ns)   --->   "%num_o_4 = call i256 @_ssdm_op_PartSet.i256.i256.i32.i32.i32(i256 %num_o_1, i32 %tmp_11, i32 32, i32 63)" [../pingpang/neuron.cpp:231]   --->   Operation 326 'partset' 'num_o_4' <Predicate = (tmp_8 & !brmerge & !tmp_4)> <Delay = 0.00>
+ST_33 : Operation 327 [1/1] (0.67ns)   --->   "br label %._crit_edge5" [../pingpang/neuron.cpp:232]   --->   Operation 327 'br' <Predicate = (tmp_8 & !brmerge & !tmp_4)> <Delay = 0.67>
+ST_33 : Operation 328 [1/1] (0.00ns)   --->   "%tmp_51 = call i32 @_ssdm_op_PartSelect.i32.i256.i32.i32(i256 %signal_1_18, i32 32, i32 63)" [../pingpang/neuron.cpp:233]   --->   Operation 328 'partselect' 'tmp_51' <Predicate = (tmp_8 & brmerge) | (tmp_8 & tmp_4)> <Delay = 0.00>
+ST_33 : Operation 329 [1/1] (0.99ns)   --->   "%tmp_5 = icmp eq i32 %tmp_51, -1" [../pingpang/neuron.cpp:233]   --->   Operation 329 'icmp' 'tmp_5' <Predicate = (tmp_8 & brmerge) | (tmp_8 & tmp_4)> <Delay = 0.99> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 330 [1/1] (0.67ns)   --->   "br i1 %tmp_5, label %._crit_edge5, label %9" [../pingpang/neuron.cpp:233]   --->   Operation 330 'br' <Predicate = (tmp_8 & brmerge) | (tmp_8 & tmp_4)> <Delay = 0.67>
+ST_33 : Operation 331 [1/1] (0.00ns)   --->   "%tmp_54 = call i32 @_ssdm_op_PartSelect.i32.i256.i32.i32(i256 %signal_1_1, i32 32, i32 63)" [../pingpang/neuron.cpp:235]   --->   Operation 331 'partselect' 'tmp_54' <Predicate = (tmp_8 & brmerge & !tmp_5) | (tmp_8 & tmp_4 & !tmp_5)> <Delay = 0.00>
+ST_33 : Operation 332 [1/1] (0.00ns)   --->   "%tmp_55 = call i32 @_ssdm_op_PartSelect.i32.i256.i32.i32(i256 %num_o_1, i32 32, i32 63)" [../pingpang/neuron.cpp:235]   --->   Operation 332 'partselect' 'tmp_55' <Predicate = (tmp_8 & brmerge & !tmp_5) | (tmp_8 & tmp_4 & !tmp_5)> <Delay = 0.00>
+ST_33 : Operation 333 [1/1] (0.00ns)   --->   "%tmp_12_cast = sext i32 %tmp_55 to i33" [../pingpang/neuron.cpp:235]   --->   Operation 333 'sext' 'tmp_12_cast' <Predicate = (tmp_8 & brmerge & !tmp_5) | (tmp_8 & tmp_4 & !tmp_5)> <Delay = 0.00>
+ST_33 : Operation 334 [1/1] (1.01ns)   --->   "%output1_10_sum1 = add i33 %tmp_12_cast, %tmp_26_cast" [../pingpang/neuron.cpp:235]   --->   Operation 334 'add' 'output1_10_sum1' <Predicate = (tmp_8 & brmerge & !tmp_5) | (tmp_8 & tmp_4 & !tmp_5)> <Delay = 1.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 335 [1/1] (0.00ns)   --->   "%output1_10_sum1_cast = sext i33 %output1_10_sum1 to i64" [../pingpang/neuron.cpp:235]   --->   Operation 335 'sext' 'output1_10_sum1_cast' <Predicate = (tmp_8 & brmerge & !tmp_5) | (tmp_8 & tmp_4 & !tmp_5)> <Delay = 0.00>
+ST_33 : Operation 336 [1/1] (0.00ns)   --->   "%output0_addr_4 = getelementptr i32* %output0_s, i64 %output1_10_sum1_cast" [../pingpang/neuron.cpp:235]   --->   Operation 336 'getelementptr' 'output0_addr_4' <Predicate = (tmp_8 & brmerge & !tmp_5) | (tmp_8 & tmp_4 & !tmp_5)> <Delay = 0.00>
+ST_33 : Operation 337 [1/1] (1.01ns)   --->   "%tmp_13 = add nsw i32 %tmp_55, 1" [../pingpang/neuron.cpp:236]   --->   Operation 337 'add' 'tmp_13' <Predicate = (tmp_8 & brmerge & !tmp_5) | (tmp_8 & tmp_4 & !tmp_5)> <Delay = 1.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 338 [1/1] (0.00ns)   --->   "%num_o_6 = call i256 @_ssdm_op_PartSet.i256.i256.i32.i32.i32(i256 %num_o_1, i32 %tmp_13, i32 32, i32 63)" [../pingpang/neuron.cpp:236]   --->   Operation 338 'partset' 'num_o_6' <Predicate = (tmp_8 & brmerge & !tmp_5) | (tmp_8 & tmp_4 & !tmp_5)> <Delay = 0.00>
+ST_33 : Operation 339 [1/1] (0.67ns)   --->   "br label %._crit_edge5" [../pingpang/neuron.cpp:237]   --->   Operation 339 'br' <Predicate = (tmp_8 & brmerge & !tmp_5) | (tmp_8 & tmp_4 & !tmp_5)> <Delay = 0.67>
+ST_33 : Operation 340 [1/1] (0.00ns)   --->   "%num_o_3 = phi i256 [ %num_o_4, %8 ], [ %num_o_1, %._crit_edge3 ], [ %num_o_6, %9 ]"   --->   Operation 340 'phi' 'num_o_3' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_33 : Operation 341 [1/1] (0.00ns)   --->   "%tmp_56 = call i32 @_ssdm_op_PartSelect.i32.i256.i32.i32(i256 %signal_1_18, i32 64, i32 95)" [../pingpang/neuron.cpp:239]   --->   Operation 341 'partselect' 'tmp_56' <Predicate = (tmp_8 & tmp_14)> <Delay = 0.00>
+ST_33 : Operation 342 [1/1] (0.99ns)   --->   "%tmp_15 = icmp ne i32 %tmp_56, -1" [../pingpang/neuron.cpp:239]   --->   Operation 342 'icmp' 'tmp_15' <Predicate = (tmp_8 & tmp_14)> <Delay = 0.99> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 343 [1/1] (0.28ns)   --->   "%or_cond1 = and i1 %tmp_15, %tmp_7" [../pingpang/neuron.cpp:239]   --->   Operation 343 'and' 'or_cond1' <Predicate = (tmp_8 & tmp_14)> <Delay = 0.28> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 344 [1/1] (0.00ns)   --->   "br i1 %or_cond1, label %11, label %._crit_edge6" [../pingpang/neuron.cpp:239]   --->   Operation 344 'br' <Predicate = (tmp_8 & tmp_14)> <Delay = 0.00>
+ST_33 : Operation 345 [1/1] (0.00ns)   --->   "%tmp_57 = call i32 @_ssdm_op_PartSelect.i32.i256.i32.i32(i256 %signal_1_18, i32 64, i32 95)" [../pingpang/neuron.cpp:244]   --->   Operation 345 'partselect' 'tmp_57' <Predicate = (tmp_8 & !tmp_14) | (tmp_8 & !or_cond1)> <Delay = 0.00>
+ST_33 : Operation 346 [1/1] (0.99ns)   --->   "%tmp_16 = icmp eq i32 %tmp_57, -1" [../pingpang/neuron.cpp:244]   --->   Operation 346 'icmp' 'tmp_16' <Predicate = (tmp_8 & !tmp_14) | (tmp_8 & !or_cond1)> <Delay = 0.99> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 347 [1/1] (0.67ns)   --->   "br i1 %tmp_16, label %._crit_edge8, label %12" [../pingpang/neuron.cpp:244]   --->   Operation 347 'br' <Predicate = (tmp_8 & !tmp_14) | (tmp_8 & !or_cond1)> <Delay = 0.67>
+ST_33 : Operation 348 [1/1] (0.00ns)   --->   "%tmp_60 = call i32 @_ssdm_op_PartSelect.i32.i256.i32.i32(i256 %signal_1_1, i32 64, i32 95)" [../pingpang/neuron.cpp:246]   --->   Operation 348 'partselect' 'tmp_60' <Predicate = (tmp_8 & !tmp_14 & !tmp_16) | (tmp_8 & !or_cond1 & !tmp_16)> <Delay = 0.00>
+ST_33 : Operation 349 [1/1] (0.00ns)   --->   "%tmp_61 = call i32 @_ssdm_op_PartSelect.i32.i256.i32.i32(i256 %num_o_3, i32 64, i32 95)" [../pingpang/neuron.cpp:246]   --->   Operation 349 'partselect' 'tmp_61' <Predicate = (tmp_8 & !tmp_14 & !tmp_16) | (tmp_8 & !or_cond1 & !tmp_16)> <Delay = 0.00>
+ST_33 : Operation 350 [1/1] (0.00ns)   --->   "%tmp_19_cast = sext i32 %tmp_61 to i33" [../pingpang/neuron.cpp:246]   --->   Operation 350 'sext' 'tmp_19_cast' <Predicate = (tmp_8 & !tmp_14 & !tmp_16) | (tmp_8 & !or_cond1 & !tmp_16)> <Delay = 0.00>
+ST_33 : Operation 351 [1/1] (1.01ns)   --->   "%output2_12_sum = add i33 %tmp_19_cast, %tmp_25_cast" [../pingpang/neuron.cpp:246]   --->   Operation 351 'add' 'output2_12_sum' <Predicate = (tmp_8 & !tmp_14 & !tmp_16) | (tmp_8 & !or_cond1 & !tmp_16)> <Delay = 1.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 352 [1/1] (0.00ns)   --->   "%output2_12_sum_cast = sext i33 %output2_12_sum to i64" [../pingpang/neuron.cpp:246]   --->   Operation 352 'sext' 'output2_12_sum_cast' <Predicate = (tmp_8 & !tmp_14 & !tmp_16) | (tmp_8 & !or_cond1 & !tmp_16)> <Delay = 0.00>
+ST_33 : Operation 353 [1/1] (0.00ns)   --->   "%output1_addr_3 = getelementptr i32* %output1_s, i64 %output2_12_sum_cast" [../pingpang/neuron.cpp:246]   --->   Operation 353 'getelementptr' 'output1_addr_3' <Predicate = (tmp_8 & !tmp_14 & !tmp_16) | (tmp_8 & !or_cond1 & !tmp_16)> <Delay = 0.00>
+ST_33 : Operation 354 [1/1] (1.01ns)   --->   "%tmp_20 = add nsw i32 %tmp_61, 1" [../pingpang/neuron.cpp:247]   --->   Operation 354 'add' 'tmp_20' <Predicate = (tmp_8 & !tmp_14 & !tmp_16) | (tmp_8 & !or_cond1 & !tmp_16)> <Delay = 1.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 355 [1/1] (0.00ns)   --->   "%num_o_9 = call i256 @_ssdm_op_PartSet.i256.i256.i32.i32.i32(i256 %num_o_3, i32 %tmp_20, i32 64, i32 95)" [../pingpang/neuron.cpp:247]   --->   Operation 355 'partset' 'num_o_9' <Predicate = (tmp_8 & !tmp_14 & !tmp_16) | (tmp_8 & !or_cond1 & !tmp_16)> <Delay = 0.00>
+ST_33 : Operation 356 [1/1] (0.67ns)   --->   "br label %._crit_edge8" [../pingpang/neuron.cpp:248]   --->   Operation 356 'br' <Predicate = (tmp_8 & !tmp_14 & !tmp_16) | (tmp_8 & !or_cond1 & !tmp_16)> <Delay = 0.67>
+ST_33 : Operation 357 [1/1] (0.00ns)   --->   "%tmp_58 = call i32 @_ssdm_op_PartSelect.i32.i256.i32.i32(i256 %signal_1_1, i32 64, i32 95)" [../pingpang/neuron.cpp:241]   --->   Operation 357 'partselect' 'tmp_58' <Predicate = (tmp_8 & tmp_14 & or_cond1)> <Delay = 0.00>
+ST_33 : Operation 358 [1/1] (0.00ns)   --->   "%tmp_59 = call i32 @_ssdm_op_PartSelect.i32.i256.i32.i32(i256 %num_o_3, i32 64, i32 95)" [../pingpang/neuron.cpp:241]   --->   Operation 358 'partselect' 'tmp_59' <Predicate = (tmp_8 & tmp_14 & or_cond1)> <Delay = 0.00>
+ST_33 : Operation 359 [1/1] (0.00ns)   --->   "%tmp_17_cast = sext i32 %tmp_59 to i33" [../pingpang/neuron.cpp:241]   --->   Operation 359 'sext' 'tmp_17_cast' <Predicate = (tmp_8 & tmp_14 & or_cond1)> <Delay = 0.00>
+ST_33 : Operation 360 [1/1] (1.01ns)   --->   "%output2_12_sum1 = add i33 %tmp_17_cast, %tmp_25_cast" [../pingpang/neuron.cpp:241]   --->   Operation 360 'add' 'output2_12_sum1' <Predicate = (tmp_8 & tmp_14 & or_cond1)> <Delay = 1.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 361 [1/1] (0.00ns)   --->   "%output2_12_sum1_cast = sext i33 %output2_12_sum1 to i64" [../pingpang/neuron.cpp:241]   --->   Operation 361 'sext' 'output2_12_sum1_cast' <Predicate = (tmp_8 & tmp_14 & or_cond1)> <Delay = 0.00>
+ST_33 : Operation 362 [1/1] (0.00ns)   --->   "%output1_addr_2 = getelementptr i32* %output1_s, i64 %output2_12_sum1_cast" [../pingpang/neuron.cpp:241]   --->   Operation 362 'getelementptr' 'output1_addr_2' <Predicate = (tmp_8 & tmp_14 & or_cond1)> <Delay = 0.00>
+ST_33 : Operation 363 [1/1] (1.01ns)   --->   "%tmp_18 = add nsw i32 %tmp_59, 1" [../pingpang/neuron.cpp:242]   --->   Operation 363 'add' 'tmp_18' <Predicate = (tmp_8 & tmp_14 & or_cond1)> <Delay = 1.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 364 [1/1] (0.00ns)   --->   "%num_o_8 = call i256 @_ssdm_op_PartSet.i256.i256.i32.i32.i32(i256 %num_o_3, i32 %tmp_18, i32 64, i32 95)" [../pingpang/neuron.cpp:242]   --->   Operation 364 'partset' 'num_o_8' <Predicate = (tmp_8 & tmp_14 & or_cond1)> <Delay = 0.00>
+ST_33 : Operation 365 [1/1] (0.67ns)   --->   "br label %._crit_edge8" [../pingpang/neuron.cpp:243]   --->   Operation 365 'br' <Predicate = (tmp_8 & tmp_14 & or_cond1)> <Delay = 0.67>
+ST_33 : Operation 366 [1/1] (0.00ns)   --->   "%tmp_62 = call i32 @_ssdm_op_PartSelect.i32.i256.i32.i32(i256 %signal_1_18, i32 96, i32 127)" [../pingpang/neuron.cpp:250]   --->   Operation 366 'partselect' 'tmp_62' <Predicate = (tmp_8 & tmp_14)> <Delay = 0.00>
+ST_33 : Operation 367 [1/1] (0.99ns)   --->   "%tmp_21 = icmp eq i32 %tmp_62, -1" [../pingpang/neuron.cpp:250]   --->   Operation 367 'icmp' 'tmp_21' <Predicate = (tmp_8 & tmp_14)> <Delay = 0.99> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 368 [1/1] (0.28ns)   --->   "%or_cond2 = or i1 %tmp_21, %tmp" [../pingpang/neuron.cpp:250]   --->   Operation 368 'or' 'or_cond2' <Predicate = (tmp_8 & tmp_14)> <Delay = 0.28> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.28> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 369 [1/1] (0.00ns)   --->   "br i1 %or_cond2, label %._crit_edge9, label %14" [../pingpang/neuron.cpp:250]   --->   Operation 369 'br' <Predicate = (tmp_8 & tmp_14)> <Delay = 0.00>
+ST_33 : Operation 370 [1/1] (0.00ns)   --->   "%tmp_63 = call i32 @_ssdm_op_PartSelect.i32.i256.i32.i32(i256 %signal_1_18, i32 96, i32 127)" [../pingpang/neuron.cpp:254]   --->   Operation 370 'partselect' 'tmp_63' <Predicate = (tmp_8 & !tmp_14) | (tmp_8 & or_cond2)> <Delay = 0.00>
+ST_33 : Operation 371 [1/1] (0.99ns)   --->   "%tmp_22 = icmp eq i32 %tmp_63, -1" [../pingpang/neuron.cpp:254]   --->   Operation 371 'icmp' 'tmp_22' <Predicate = (tmp_8 & !tmp_14) | (tmp_8 & or_cond2)> <Delay = 0.99> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.72> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 372 [1/1] (0.00ns)   --->   "%tmp_65 = call i32 @_ssdm_op_PartSelect.i32.i256.i32.i32(i256 %signal_1_1, i32 96, i32 127)" [../pingpang/neuron.cpp:256]   --->   Operation 372 'partselect' 'tmp_65' <Predicate = (tmp_8 & !tmp_14 & !tmp_22) | (tmp_8 & or_cond2 & !tmp_22)> <Delay = 0.00>
+
+State 34 <SV = 33> <Delay = 8.75>
+ST_34 : Operation 373 [7/8] (0.00ns)   --->   "call fastcc void @update_outdata(i30 %i, i256 %V_m_r_1, i256 %i_syn_ex_rr_1, i256 %i_syn_in_rr_1, i256 %r_ref_r_1, i1024* %input00, i25 %input01_V5)" [../pingpang/neuron.cpp:195]   --->   Operation 373 'call' <Predicate = (tmp_8)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_34 : Operation 374 [1/1] (8.75ns)   --->   "%output0_addr_2_req = call i1 @_ssdm_op_WriteReq.m_axi.i32P(i32* %output0_addr_2, i32 1)" [../pingpang/neuron.cpp:224]   --->   Operation 374 'writereq' 'output0_addr_2_req' <Predicate = (tmp_8 & !tmp_1)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_34 : Operation 375 [1/1] (8.75ns)   --->   "%output1_addr_3_req = call i1 @_ssdm_op_WriteReq.m_axi.i32P(i32* %output1_addr_3, i32 1)" [../pingpang/neuron.cpp:246]   --->   Operation 375 'writereq' 'output1_addr_3_req' <Predicate = (tmp_8 & !tmp_14 & !tmp_16) | (tmp_8 & !or_cond1 & !tmp_16)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_34 : Operation 376 [1/1] (8.75ns)   --->   "%output1_addr_2_req = call i1 @_ssdm_op_WriteReq.m_axi.i32P(i32* %output1_addr_2, i32 1)" [../pingpang/neuron.cpp:241]   --->   Operation 376 'writereq' 'output1_addr_2_req' <Predicate = (tmp_8 & tmp_14 & or_cond1)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_34 : Operation 377 [1/1] (0.00ns)   --->   "%num_o_5 = phi i256 [ %num_o_8, %11 ], [ %num_o_3, %._crit_edge6 ], [ %num_o_9, %12 ]"   --->   Operation 377 'phi' 'num_o_5' <Predicate = true> <Delay = 0.00>
+ST_34 : Operation 378 [1/1] (0.00ns)   --->   "%tmp_64 = call i32 @_ssdm_op_PartSelect.i32.i256.i32.i32(i256 %num_o_5, i32 96, i32 127)" [../pingpang/neuron.cpp:252]   --->   Operation 378 'partselect' 'tmp_64' <Predicate = (tmp_8 & tmp_14 & !or_cond2)> <Delay = 0.00>
+ST_34 : Operation 379 [1/1] (0.65ns)   --->   "br label %._crit_edge11" [../pingpang/neuron.cpp:253]   --->   Operation 379 'br' <Predicate = (tmp_8 & tmp_14 & !or_cond2)> <Delay = 0.65>
+ST_34 : Operation 380 [1/1] (0.65ns)   --->   "br i1 %tmp_22, label %._crit_edge11, label %15" [../pingpang/neuron.cpp:254]   --->   Operation 380 'br' <Predicate = (tmp_8 & !tmp_14) | (tmp_8 & or_cond2)> <Delay = 0.65>
+ST_34 : Operation 381 [1/1] (0.00ns)   --->   "%tmp_66 = call i32 @_ssdm_op_PartSelect.i32.i256.i32.i32(i256 %num_o_5, i32 96, i32 127)" [../pingpang/neuron.cpp:256]   --->   Operation 381 'partselect' 'tmp_66' <Predicate = (tmp_8 & !tmp_14 & !tmp_22) | (tmp_8 & or_cond2 & !tmp_22)> <Delay = 0.00>
+ST_34 : Operation 382 [1/1] (0.00ns)   --->   "%tmp_23_cast = sext i32 %tmp_66 to i33" [../pingpang/neuron.cpp:256]   --->   Operation 382 'sext' 'tmp_23_cast' <Predicate = (tmp_8 & !tmp_14 & !tmp_22) | (tmp_8 & or_cond2 & !tmp_22)> <Delay = 0.00>
+ST_34 : Operation 383 [1/1] (1.01ns)   --->   "%output3_14_sum = add i33 %tmp_23_cast, %tmp_9_cast" [../pingpang/neuron.cpp:256]   --->   Operation 383 'add' 'output3_14_sum' <Predicate = (tmp_8 & !tmp_14 & !tmp_22) | (tmp_8 & or_cond2 & !tmp_22)> <Delay = 1.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 384 [1/1] (0.00ns)   --->   "%output3_14_sum_cast = sext i33 %output3_14_sum to i64" [../pingpang/neuron.cpp:256]   --->   Operation 384 'sext' 'output3_14_sum_cast' <Predicate = (tmp_8 & !tmp_14 & !tmp_22) | (tmp_8 & or_cond2 & !tmp_22)> <Delay = 0.00>
+ST_34 : Operation 385 [1/1] (0.00ns)   --->   "%output1_addr_4 = getelementptr i32* %output1_s, i64 %output3_14_sum_cast" [../pingpang/neuron.cpp:256]   --->   Operation 385 'getelementptr' 'output1_addr_4' <Predicate = (tmp_8 & !tmp_14 & !tmp_22) | (tmp_8 & or_cond2 & !tmp_22)> <Delay = 0.00>
+ST_34 : Operation 386 [1/1] (1.01ns)   --->   "%tmp_24 = add nsw i32 %tmp_66, 1" [../pingpang/neuron.cpp:257]   --->   Operation 386 'add' 'tmp_24' <Predicate = (tmp_8 & !tmp_14 & !tmp_22) | (tmp_8 & or_cond2 & !tmp_22)> <Delay = 1.01> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 0.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 387 [1/1] (0.00ns)   --->   "%num_o_10 = call i256 @_ssdm_op_PartSet.i256.i256.i32.i32.i32(i256 %num_o_5, i32 %tmp_24, i32 96, i32 127)" [../pingpang/neuron.cpp:257]   --->   Operation 387 'partset' 'num_o_10' <Predicate = (tmp_8 & !tmp_14 & !tmp_22) | (tmp_8 & or_cond2 & !tmp_22)> <Delay = 0.00>
+ST_34 : Operation 388 [1/1] (0.65ns)   --->   "br label %._crit_edge11" [../pingpang/neuron.cpp:258]   --->   Operation 388 'br' <Predicate = (tmp_8 & !tmp_14 & !tmp_22) | (tmp_8 & or_cond2 & !tmp_22)> <Delay = 0.65>
+ST_34 : Operation 389 [1/1] (0.00ns)   --->   "%num_o_7 = phi i256 [ %num_o_5, %14 ], [ %num_o_5, %._crit_edge9 ], [ %num_o_10, %15 ]"   --->   Operation 389 'phi' 'num_o_7' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_34 : Operation 390 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str13, i32 %tmp_42)" [../pingpang/neuron.cpp:259]   --->   Operation 390 'specregionend' 'empty' <Predicate = (tmp_8)> <Delay = 0.00>
+ST_34 : Operation 391 [1/1] (0.00ns)   --->   "br label %1" [../pingpang/neuron.cpp:195]   --->   Operation 391 'br' <Predicate = (tmp_8)> <Delay = 0.00>
+
+State 35 <SV = 34> <Delay = 8.75>
+ST_35 : Operation 392 [6/8] (0.00ns)   --->   "call fastcc void @update_outdata(i30 %i, i256 %V_m_r_1, i256 %i_syn_ex_rr_1, i256 %i_syn_in_rr_1, i256 %r_ref_r_1, i1024* %input00, i25 %input01_V5)" [../pingpang/neuron.cpp:195]   --->   Operation 392 'call' <Predicate = (tmp_8)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_35 : Operation 393 [1/1] (8.75ns)   --->   "call void @_ssdm_op_Write.m_axi.i32P(i32* %output0_addr_2, i32 %tmp_49, i4 -1)" [../pingpang/neuron.cpp:224]   --->   Operation 393 'write' <Predicate = (tmp_8 & !tmp_1)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_35 : Operation 394 [1/1] (8.75ns)   --->   "%output0_addr_3_req = call i1 @_ssdm_op_WriteReq.m_axi.i32P(i32* %output0_addr_3, i32 1)" [../pingpang/neuron.cpp:230]   --->   Operation 394 'writereq' 'output0_addr_3_req' <Predicate = (tmp_8 & !brmerge & !tmp_4)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_35 : Operation 395 [1/1] (8.75ns)   --->   "%output0_addr_4_req = call i1 @_ssdm_op_WriteReq.m_axi.i32P(i32* %output0_addr_4, i32 1)" [../pingpang/neuron.cpp:235]   --->   Operation 395 'writereq' 'output0_addr_4_req' <Predicate = (tmp_8 & brmerge & !tmp_5) | (tmp_8 & tmp_4 & !tmp_5)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_35 : Operation 396 [1/1] (8.75ns)   --->   "call void @_ssdm_op_Write.m_axi.i32P(i32* %output1_addr_3, i32 %tmp_60, i4 -1)" [../pingpang/neuron.cpp:246]   --->   Operation 396 'write' <Predicate = (tmp_8 & !tmp_14 & !tmp_16) | (tmp_8 & !or_cond1 & !tmp_16)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_35 : Operation 397 [1/1] (8.75ns)   --->   "call void @_ssdm_op_Write.m_axi.i32P(i32* %output1_addr_2, i32 %tmp_58, i4 -1)" [../pingpang/neuron.cpp:241]   --->   Operation 397 'write' <Predicate = (tmp_8 & tmp_14 & or_cond1)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_35 : Operation 398 [1/1] (8.75ns)   --->   "%output1_addr_req32 = call i1 @_ssdm_op_WriteReq.m_axi.i32P(i32* %output1_addr, i32 1)" [../pingpang/neuron.cpp:252]   --->   Operation 398 'writereq' 'output1_addr_req32' <Predicate = (tmp_8 & tmp_14 & !or_cond2)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_35 : Operation 399 [1/1] (8.75ns)   --->   "%output1_addr_4_req = call i1 @_ssdm_op_WriteReq.m_axi.i32P(i32* %output1_addr_4, i32 1)" [../pingpang/neuron.cpp:256]   --->   Operation 399 'writereq' 'output1_addr_4_req' <Predicate = (tmp_8 & !tmp_14 & !tmp_22) | (tmp_8 & or_cond2 & !tmp_22)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 36 <SV = 35> <Delay = 8.75>
+ST_36 : Operation 400 [5/8] (0.00ns)   --->   "call fastcc void @update_outdata(i30 %i, i256 %V_m_r_1, i256 %i_syn_ex_rr_1, i256 %i_syn_in_rr_1, i256 %r_ref_r_1, i1024* %input00, i25 %input01_V5)" [../pingpang/neuron.cpp:195]   --->   Operation 400 'call' <Predicate = (tmp_8)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_36 : Operation 401 [5/5] (8.75ns)   --->   "%output0_addr_2_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr_2)" [../pingpang/neuron.cpp:224]   --->   Operation 401 'writeresp' 'output0_addr_2_resp' <Predicate = (tmp_8 & !tmp_1)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_36 : Operation 402 [1/1] (8.75ns)   --->   "call void @_ssdm_op_Write.m_axi.i32P(i32* %output0_addr_3, i32 %tmp_52, i4 -1)" [../pingpang/neuron.cpp:230]   --->   Operation 402 'write' <Predicate = (tmp_8 & !brmerge & !tmp_4)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_36 : Operation 403 [1/1] (8.75ns)   --->   "call void @_ssdm_op_Write.m_axi.i32P(i32* %output0_addr_4, i32 %tmp_54, i4 -1)" [../pingpang/neuron.cpp:235]   --->   Operation 403 'write' <Predicate = (tmp_8 & brmerge & !tmp_5) | (tmp_8 & tmp_4 & !tmp_5)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_36 : Operation 404 [5/5] (8.75ns)   --->   "%output1_addr_3_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr_3)" [../pingpang/neuron.cpp:246]   --->   Operation 404 'writeresp' 'output1_addr_3_resp' <Predicate = (tmp_8 & !tmp_14 & !tmp_16) | (tmp_8 & !or_cond1 & !tmp_16)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_36 : Operation 405 [5/5] (8.75ns)   --->   "%output1_addr_2_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr_2)" [../pingpang/neuron.cpp:241]   --->   Operation 405 'writeresp' 'output1_addr_2_resp' <Predicate = (tmp_8 & tmp_14 & or_cond1)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_36 : Operation 406 [1/1] (8.75ns)   --->   "call void @_ssdm_op_Write.m_axi.i32P(i32* %output1_addr, i32 %tmp_64, i4 -1)" [../pingpang/neuron.cpp:252]   --->   Operation 406 'write' <Predicate = (tmp_8 & tmp_14 & !or_cond2)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_36 : Operation 407 [1/1] (8.75ns)   --->   "call void @_ssdm_op_Write.m_axi.i32P(i32* %output1_addr_4, i32 %tmp_65, i4 -1)" [../pingpang/neuron.cpp:256]   --->   Operation 407 'write' <Predicate = (tmp_8 & !tmp_14 & !tmp_22) | (tmp_8 & or_cond2 & !tmp_22)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 37 <SV = 36> <Delay = 8.75>
+ST_37 : Operation 408 [4/8] (0.00ns)   --->   "call fastcc void @update_outdata(i30 %i, i256 %V_m_r_1, i256 %i_syn_ex_rr_1, i256 %i_syn_in_rr_1, i256 %r_ref_r_1, i1024* %input00, i25 %input01_V5)" [../pingpang/neuron.cpp:195]   --->   Operation 408 'call' <Predicate = (tmp_8)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_37 : Operation 409 [4/5] (8.75ns)   --->   "%output0_addr_2_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr_2)" [../pingpang/neuron.cpp:224]   --->   Operation 409 'writeresp' 'output0_addr_2_resp' <Predicate = (tmp_8 & !tmp_1)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_37 : Operation 410 [5/5] (8.75ns)   --->   "%output0_addr_3_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr_3)" [../pingpang/neuron.cpp:230]   --->   Operation 410 'writeresp' 'output0_addr_3_resp' <Predicate = (tmp_8 & !brmerge & !tmp_4)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_37 : Operation 411 [5/5] (8.75ns)   --->   "%output0_addr_4_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr_4)" [../pingpang/neuron.cpp:235]   --->   Operation 411 'writeresp' 'output0_addr_4_resp' <Predicate = (tmp_8 & brmerge & !tmp_5) | (tmp_8 & tmp_4 & !tmp_5)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_37 : Operation 412 [4/5] (8.75ns)   --->   "%output1_addr_3_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr_3)" [../pingpang/neuron.cpp:246]   --->   Operation 412 'writeresp' 'output1_addr_3_resp' <Predicate = (tmp_8 & !tmp_14 & !tmp_16) | (tmp_8 & !or_cond1 & !tmp_16)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_37 : Operation 413 [4/5] (8.75ns)   --->   "%output1_addr_2_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr_2)" [../pingpang/neuron.cpp:241]   --->   Operation 413 'writeresp' 'output1_addr_2_resp' <Predicate = (tmp_8 & tmp_14 & or_cond1)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_37 : Operation 414 [5/5] (8.75ns)   --->   "%output1_addr_resp33 = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr)" [../pingpang/neuron.cpp:252]   --->   Operation 414 'writeresp' 'output1_addr_resp33' <Predicate = (tmp_8 & tmp_14 & !or_cond2)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_37 : Operation 415 [5/5] (8.75ns)   --->   "%output1_addr_4_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr_4)" [../pingpang/neuron.cpp:256]   --->   Operation 415 'writeresp' 'output1_addr_4_resp' <Predicate = (tmp_8 & !tmp_14 & !tmp_22) | (tmp_8 & or_cond2 & !tmp_22)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 38 <SV = 37> <Delay = 8.75>
+ST_38 : Operation 416 [3/8] (0.00ns)   --->   "call fastcc void @update_outdata(i30 %i, i256 %V_m_r_1, i256 %i_syn_ex_rr_1, i256 %i_syn_in_rr_1, i256 %r_ref_r_1, i1024* %input00, i25 %input01_V5)" [../pingpang/neuron.cpp:195]   --->   Operation 416 'call' <Predicate = (tmp_8)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_38 : Operation 417 [3/5] (8.75ns)   --->   "%output0_addr_2_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr_2)" [../pingpang/neuron.cpp:224]   --->   Operation 417 'writeresp' 'output0_addr_2_resp' <Predicate = (tmp_8 & !tmp_1)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_38 : Operation 418 [4/5] (8.75ns)   --->   "%output0_addr_3_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr_3)" [../pingpang/neuron.cpp:230]   --->   Operation 418 'writeresp' 'output0_addr_3_resp' <Predicate = (tmp_8 & !brmerge & !tmp_4)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_38 : Operation 419 [4/5] (8.75ns)   --->   "%output0_addr_4_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr_4)" [../pingpang/neuron.cpp:235]   --->   Operation 419 'writeresp' 'output0_addr_4_resp' <Predicate = (tmp_8 & brmerge & !tmp_5) | (tmp_8 & tmp_4 & !tmp_5)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_38 : Operation 420 [3/5] (8.75ns)   --->   "%output1_addr_3_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr_3)" [../pingpang/neuron.cpp:246]   --->   Operation 420 'writeresp' 'output1_addr_3_resp' <Predicate = (tmp_8 & !tmp_14 & !tmp_16) | (tmp_8 & !or_cond1 & !tmp_16)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_38 : Operation 421 [3/5] (8.75ns)   --->   "%output1_addr_2_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr_2)" [../pingpang/neuron.cpp:241]   --->   Operation 421 'writeresp' 'output1_addr_2_resp' <Predicate = (tmp_8 & tmp_14 & or_cond1)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_38 : Operation 422 [4/5] (8.75ns)   --->   "%output1_addr_resp33 = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr)" [../pingpang/neuron.cpp:252]   --->   Operation 422 'writeresp' 'output1_addr_resp33' <Predicate = (tmp_8 & tmp_14 & !or_cond2)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_38 : Operation 423 [4/5] (8.75ns)   --->   "%output1_addr_4_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr_4)" [../pingpang/neuron.cpp:256]   --->   Operation 423 'writeresp' 'output1_addr_4_resp' <Predicate = (tmp_8 & !tmp_14 & !tmp_22) | (tmp_8 & or_cond2 & !tmp_22)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 39 <SV = 38> <Delay = 8.75>
+ST_39 : Operation 424 [2/8] (0.00ns)   --->   "call fastcc void @update_outdata(i30 %i, i256 %V_m_r_1, i256 %i_syn_ex_rr_1, i256 %i_syn_in_rr_1, i256 %r_ref_r_1, i1024* %input00, i25 %input01_V5)" [../pingpang/neuron.cpp:195]   --->   Operation 424 'call' <Predicate = (tmp_8)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_39 : Operation 425 [2/5] (8.75ns)   --->   "%output0_addr_2_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr_2)" [../pingpang/neuron.cpp:224]   --->   Operation 425 'writeresp' 'output0_addr_2_resp' <Predicate = (tmp_8 & !tmp_1)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_39 : Operation 426 [3/5] (8.75ns)   --->   "%output0_addr_3_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr_3)" [../pingpang/neuron.cpp:230]   --->   Operation 426 'writeresp' 'output0_addr_3_resp' <Predicate = (tmp_8 & !brmerge & !tmp_4)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_39 : Operation 427 [3/5] (8.75ns)   --->   "%output0_addr_4_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr_4)" [../pingpang/neuron.cpp:235]   --->   Operation 427 'writeresp' 'output0_addr_4_resp' <Predicate = (tmp_8 & brmerge & !tmp_5) | (tmp_8 & tmp_4 & !tmp_5)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_39 : Operation 428 [2/5] (8.75ns)   --->   "%output1_addr_3_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr_3)" [../pingpang/neuron.cpp:246]   --->   Operation 428 'writeresp' 'output1_addr_3_resp' <Predicate = (tmp_8 & !tmp_14 & !tmp_16) | (tmp_8 & !or_cond1 & !tmp_16)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_39 : Operation 429 [2/5] (8.75ns)   --->   "%output1_addr_2_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr_2)" [../pingpang/neuron.cpp:241]   --->   Operation 429 'writeresp' 'output1_addr_2_resp' <Predicate = (tmp_8 & tmp_14 & or_cond1)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_39 : Operation 430 [3/5] (8.75ns)   --->   "%output1_addr_resp33 = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr)" [../pingpang/neuron.cpp:252]   --->   Operation 430 'writeresp' 'output1_addr_resp33' <Predicate = (tmp_8 & tmp_14 & !or_cond2)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_39 : Operation 431 [3/5] (8.75ns)   --->   "%output1_addr_4_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr_4)" [../pingpang/neuron.cpp:256]   --->   Operation 431 'writeresp' 'output1_addr_4_resp' <Predicate = (tmp_8 & !tmp_14 & !tmp_22) | (tmp_8 & or_cond2 & !tmp_22)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 40 <SV = 39> <Delay = 8.75>
+ST_40 : Operation 432 [1/8] (0.00ns)   --->   "call fastcc void @update_outdata(i30 %i, i256 %V_m_r_1, i256 %i_syn_ex_rr_1, i256 %i_syn_in_rr_1, i256 %r_ref_r_1, i1024* %input00, i25 %input01_V5)" [../pingpang/neuron.cpp:195]   --->   Operation 432 'call' <Predicate = (tmp_8)> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_40 : Operation 433 [1/5] (8.75ns)   --->   "%output0_addr_2_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr_2)" [../pingpang/neuron.cpp:224]   --->   Operation 433 'writeresp' 'output0_addr_2_resp' <Predicate = (tmp_8 & !tmp_1)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_40 : Operation 434 [2/5] (8.75ns)   --->   "%output0_addr_3_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr_3)" [../pingpang/neuron.cpp:230]   --->   Operation 434 'writeresp' 'output0_addr_3_resp' <Predicate = (tmp_8 & !brmerge & !tmp_4)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_40 : Operation 435 [2/5] (8.75ns)   --->   "%output0_addr_4_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr_4)" [../pingpang/neuron.cpp:235]   --->   Operation 435 'writeresp' 'output0_addr_4_resp' <Predicate = (tmp_8 & brmerge & !tmp_5) | (tmp_8 & tmp_4 & !tmp_5)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_40 : Operation 436 [1/5] (8.75ns)   --->   "%output1_addr_3_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr_3)" [../pingpang/neuron.cpp:246]   --->   Operation 436 'writeresp' 'output1_addr_3_resp' <Predicate = (tmp_8 & !tmp_14 & !tmp_16) | (tmp_8 & !or_cond1 & !tmp_16)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_40 : Operation 437 [1/5] (8.75ns)   --->   "%output1_addr_2_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr_2)" [../pingpang/neuron.cpp:241]   --->   Operation 437 'writeresp' 'output1_addr_2_resp' <Predicate = (tmp_8 & tmp_14 & or_cond1)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_40 : Operation 438 [2/5] (8.75ns)   --->   "%output1_addr_resp33 = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr)" [../pingpang/neuron.cpp:252]   --->   Operation 438 'writeresp' 'output1_addr_resp33' <Predicate = (tmp_8 & tmp_14 & !or_cond2)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_40 : Operation 439 [2/5] (8.75ns)   --->   "%output1_addr_4_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr_4)" [../pingpang/neuron.cpp:256]   --->   Operation 439 'writeresp' 'output1_addr_4_resp' <Predicate = (tmp_8 & !tmp_14 & !tmp_22) | (tmp_8 & or_cond2 & !tmp_22)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 41 <SV = 40> <Delay = 8.75>
+ST_41 : Operation 440 [1/5] (8.75ns)   --->   "%output0_addr_3_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr_3)" [../pingpang/neuron.cpp:230]   --->   Operation 440 'writeresp' 'output0_addr_3_resp' <Predicate = (tmp_8 & !brmerge & !tmp_4)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_41 : Operation 441 [1/5] (8.75ns)   --->   "%output0_addr_4_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr_4)" [../pingpang/neuron.cpp:235]   --->   Operation 441 'writeresp' 'output0_addr_4_resp' <Predicate = (tmp_8 & brmerge & !tmp_5) | (tmp_8 & tmp_4 & !tmp_5)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_41 : Operation 442 [1/5] (8.75ns)   --->   "%output1_addr_resp33 = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr)" [../pingpang/neuron.cpp:252]   --->   Operation 442 'writeresp' 'output1_addr_resp33' <Predicate = (tmp_8 & tmp_14 & !or_cond2)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_41 : Operation 443 [1/5] (8.75ns)   --->   "%output1_addr_4_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr_4)" [../pingpang/neuron.cpp:256]   --->   Operation 443 'writeresp' 'output1_addr_4_resp' <Predicate = (tmp_8 & !tmp_14 & !tmp_22) | (tmp_8 & or_cond2 & !tmp_22)> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 42 <SV = 33> <Delay = 8.75>
+ST_42 : Operation 444 [1/1] (0.00ns)   --->   "%tmp_47 = trunc i256 %num_o to i32" [../pingpang/neuron.cpp:261]   --->   Operation 444 'trunc' 'tmp_47' <Predicate = true> <Delay = 0.00>
+ST_42 : Operation 445 [1/1] (8.75ns)   --->   "%output0_addr_1_req = call i1 @_ssdm_op_WriteReq.m_axi.i32P(i32* %output0_addr_1, i32 1)" [../pingpang/neuron.cpp:261]   --->   Operation 445 'writereq' 'output0_addr_1_req' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_42 : Operation 446 [1/1] (0.00ns)   --->   "%tmp_44 = call i32 @_ssdm_op_PartSelect.i32.i256.i32.i32(i256 %num_o, i32 32, i32 63)" [../pingpang/neuron.cpp:262]   --->   Operation 446 'partselect' 'tmp_44' <Predicate = true> <Delay = 0.00>
+ST_42 : Operation 447 [1/1] (0.00ns)   --->   "%tmp_45 = call i32 @_ssdm_op_PartSelect.i32.i256.i32.i32(i256 %num_o, i32 64, i32 95)" [../pingpang/neuron.cpp:263]   --->   Operation 447 'partselect' 'tmp_45' <Predicate = true> <Delay = 0.00>
+ST_42 : Operation 448 [1/1] (8.75ns)   --->   "%output1_addr_1_req = call i1 @_ssdm_op_WriteReq.m_axi.i32P(i32* %output1_addr_1, i32 1)" [../pingpang/neuron.cpp:263]   --->   Operation 448 'writereq' 'output1_addr_1_req' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_42 : Operation 449 [1/1] (0.00ns)   --->   "%tmp_46 = call i32 @_ssdm_op_PartSelect.i32.i256.i32.i32(i256 %num_o, i32 96, i32 127)" [../pingpang/neuron.cpp:264]   --->   Operation 449 'partselect' 'tmp_46' <Predicate = true> <Delay = 0.00>
+
+State 43 <SV = 34> <Delay = 8.75>
+ST_43 : Operation 450 [1/1] (8.75ns)   --->   "call void @_ssdm_op_Write.m_axi.i32P(i32* %output0_addr_1, i32 %tmp_47, i4 -1)" [../pingpang/neuron.cpp:261]   --->   Operation 450 'write' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_43 : Operation 451 [1/1] (8.75ns)   --->   "%output0_addr_req = call i1 @_ssdm_op_WriteReq.m_axi.i32P(i32* %output0_addr, i32 1)" [../pingpang/neuron.cpp:262]   --->   Operation 451 'writereq' 'output0_addr_req' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_43 : Operation 452 [1/1] (8.75ns)   --->   "call void @_ssdm_op_Write.m_axi.i32P(i32* %output1_addr_1, i32 %tmp_45, i4 -1)" [../pingpang/neuron.cpp:263]   --->   Operation 452 'write' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_43 : Operation 453 [1/1] (8.75ns)   --->   "%output1_addr_req = call i1 @_ssdm_op_WriteReq.m_axi.i32P(i32* %output1_addr, i32 1)" [../pingpang/neuron.cpp:264]   --->   Operation 453 'writereq' 'output1_addr_req' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 44 <SV = 35> <Delay = 8.75>
+ST_44 : Operation 454 [5/5] (8.75ns)   --->   "%output0_addr_1_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr_1)" [../pingpang/neuron.cpp:261]   --->   Operation 454 'writeresp' 'output0_addr_1_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_44 : Operation 455 [1/1] (8.75ns)   --->   "call void @_ssdm_op_Write.m_axi.i32P(i32* %output0_addr, i32 %tmp_44, i4 -1)" [../pingpang/neuron.cpp:262]   --->   Operation 455 'write' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_44 : Operation 456 [5/5] (8.75ns)   --->   "%output1_addr_1_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr_1)" [../pingpang/neuron.cpp:263]   --->   Operation 456 'writeresp' 'output1_addr_1_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_44 : Operation 457 [1/1] (8.75ns)   --->   "call void @_ssdm_op_Write.m_axi.i32P(i32* %output1_addr, i32 %tmp_46, i4 -1)" [../pingpang/neuron.cpp:264]   --->   Operation 457 'write' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 45 <SV = 36> <Delay = 8.75>
+ST_45 : Operation 458 [4/5] (8.75ns)   --->   "%output0_addr_1_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr_1)" [../pingpang/neuron.cpp:261]   --->   Operation 458 'writeresp' 'output0_addr_1_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_45 : Operation 459 [5/5] (8.75ns)   --->   "%output0_addr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr)" [../pingpang/neuron.cpp:262]   --->   Operation 459 'writeresp' 'output0_addr_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_45 : Operation 460 [4/5] (8.75ns)   --->   "%output1_addr_1_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr_1)" [../pingpang/neuron.cpp:263]   --->   Operation 460 'writeresp' 'output1_addr_1_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_45 : Operation 461 [5/5] (8.75ns)   --->   "%output1_addr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr)" [../pingpang/neuron.cpp:264]   --->   Operation 461 'writeresp' 'output1_addr_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 46 <SV = 37> <Delay = 8.75>
+ST_46 : Operation 462 [3/5] (8.75ns)   --->   "%output0_addr_1_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr_1)" [../pingpang/neuron.cpp:261]   --->   Operation 462 'writeresp' 'output0_addr_1_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_46 : Operation 463 [4/5] (8.75ns)   --->   "%output0_addr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr)" [../pingpang/neuron.cpp:262]   --->   Operation 463 'writeresp' 'output0_addr_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_46 : Operation 464 [3/5] (8.75ns)   --->   "%output1_addr_1_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr_1)" [../pingpang/neuron.cpp:263]   --->   Operation 464 'writeresp' 'output1_addr_1_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_46 : Operation 465 [4/5] (8.75ns)   --->   "%output1_addr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr)" [../pingpang/neuron.cpp:264]   --->   Operation 465 'writeresp' 'output1_addr_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 47 <SV = 38> <Delay = 8.75>
+ST_47 : Operation 466 [2/5] (8.75ns)   --->   "%output0_addr_1_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr_1)" [../pingpang/neuron.cpp:261]   --->   Operation 466 'writeresp' 'output0_addr_1_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_47 : Operation 467 [3/5] (8.75ns)   --->   "%output0_addr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr)" [../pingpang/neuron.cpp:262]   --->   Operation 467 'writeresp' 'output0_addr_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_47 : Operation 468 [2/5] (8.75ns)   --->   "%output1_addr_1_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr_1)" [../pingpang/neuron.cpp:263]   --->   Operation 468 'writeresp' 'output1_addr_1_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_47 : Operation 469 [3/5] (8.75ns)   --->   "%output1_addr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr)" [../pingpang/neuron.cpp:264]   --->   Operation 469 'writeresp' 'output1_addr_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+
+State 48 <SV = 39> <Delay = 8.75>
+ST_48 : Operation 470 [1/5] (8.75ns)   --->   "%output0_addr_1_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr_1)" [../pingpang/neuron.cpp:261]   --->   Operation 470 'writeresp' 'output0_addr_1_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_48 : Operation 471 [2/5] (8.75ns)   --->   "%output0_addr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr)" [../pingpang/neuron.cpp:262]   --->   Operation 471 'writeresp' 'output0_addr_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_48 : Operation 472 [1/5] (8.75ns)   --->   "%output1_addr_1_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr_1)" [../pingpang/neuron.cpp:263]   --->   Operation 472 'writeresp' 'output1_addr_1_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_48 : Operation 473 [2/5] (8.75ns)   --->   "%output1_addr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr)" [../pingpang/neuron.cpp:264]   --->   Operation 473 'writeresp' 'output1_addr_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_48 : Operation 474 [2/2] (0.00ns)   --->   "ret void" [../pingpang/neuron.cpp:265]   --->   Operation 474 'ret' <Predicate = true> <Delay = 0.00>
+
+State 49 <SV = 40> <Delay = 8.75>
+ST_49 : Operation 475 [1/5] (8.75ns)   --->   "%output0_addr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output0_addr)" [../pingpang/neuron.cpp:262]   --->   Operation 475 'writeresp' 'output0_addr_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_49 : Operation 476 [1/5] (8.75ns)   --->   "%output1_addr_resp = call i1 @_ssdm_op_WriteResp.m_axi.i32P(i32* %output1_addr)" [../pingpang/neuron.cpp:264]   --->   Operation 476 'writeresp' 'output1_addr_resp' <Predicate = true> <Delay = 8.75> <Core = "m_axi">   --->   Core 9 'm_axi' <Latency = 6> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_49 : Operation 477 [1/2] (0.00ns)   --->   "ret void" [../pingpang/neuron.cpp:265]   --->   Operation 477 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1ns
+The critical path consists of the following:
+	s_axi read on port 'output3_s' [28]  (1 ns)
+
+ <State 2>: 4.99ns
+The critical path consists of the following:
+	s_axi read on port 'num' [35]  (1 ns)
+	'sub' operation ('p_neg', ../pingpang/neuron.cpp:189) [107]  (1.02 ns)
+	'sub' operation ('p_neg_t1', ../pingpang/neuron.cpp:190) [119]  (1.02 ns)
+	'select' operation ('rmd', ../pingpang/neuron.cpp:190) [120]  (0.449 ns)
+	'add' operation ('rmd_0_off', ../pingpang/neuron.cpp:228) [127]  (0.789 ns)
+	'icmp' operation ('icmp', ../pingpang/neuron.cpp:228) [130]  (0.721 ns)
+
+ <State 3>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_31') to 'update_indata' [98]  (8.75 ns)
+
+ <State 4>: 8.75ns
+The critical path consists of the following:
+	'getelementptr' operation ('stable_para_addr') [56]  (0 ns)
+	bus request on port 'stable_para' (../pingpang/neuron.cpp:141) [78]  (8.75 ns)
+
+ <State 5>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'stable_para' (../pingpang/neuron.cpp:141) [78]  (8.75 ns)
+
+ <State 6>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'stable_para' (../pingpang/neuron.cpp:141) [78]  (8.75 ns)
+
+ <State 7>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'stable_para' (../pingpang/neuron.cpp:141) [78]  (8.75 ns)
+
+ <State 8>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'stable_para' (../pingpang/neuron.cpp:141) [78]  (8.75 ns)
+
+ <State 9>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'stable_para' (../pingpang/neuron.cpp:141) [78]  (8.75 ns)
+
+ <State 10>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'stable_para' (../pingpang/neuron.cpp:141) [78]  (8.75 ns)
+
+ <State 11>: 8.75ns
+The critical path consists of the following:
+	bus read on port 'stable_para' (../pingpang/neuron.cpp:141) [79]  (8.75 ns)
+
+ <State 12>: 1.28ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', ../pingpang/neuron.cpp:195) [141]  (0 ns)
+	'icmp' operation ('p_not', ../pingpang/neuron.cpp:228) [232]  (0.998 ns)
+	'or' operation ('brmerge', ../pingpang/neuron.cpp:228) [233]  (0.287 ns)
+
+ <State 13>: 1.6ns
+The critical path consists of the following:
+	'call' operation ('tmp_43', ../pingpang/neuron.cpp:195) to 'update_indata' [151]  (1.6 ns)
+
+ <State 14>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_43', ../pingpang/neuron.cpp:195) to 'update_indata' [151]  (8.75 ns)
+
+ <State 15>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_43', ../pingpang/neuron.cpp:195) to 'update_indata' [151]  (8.75 ns)
+
+ <State 16>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_43', ../pingpang/neuron.cpp:195) to 'update_indata' [151]  (8.75 ns)
+
+ <State 17>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_43', ../pingpang/neuron.cpp:195) to 'update_indata' [151]  (8.75 ns)
+
+ <State 18>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_43', ../pingpang/neuron.cpp:195) to 'update_indata' [151]  (8.75 ns)
+
+ <State 19>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_43', ../pingpang/neuron.cpp:195) to 'update_indata' [151]  (8.75 ns)
+
+ <State 20>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_43', ../pingpang/neuron.cpp:195) to 'update_indata' [151]  (8.75 ns)
+
+ <State 21>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('tmp_43', ../pingpang/neuron.cpp:195) to 'update_indata' [151]  (8.75 ns)
+
+ <State 22>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret2', ../pingpang/neuron.cpp:195) to 'execute' [168]  (8.75 ns)
+
+ <State 23>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret2', ../pingpang/neuron.cpp:195) to 'execute' [168]  (8.75 ns)
+
+ <State 24>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret2', ../pingpang/neuron.cpp:195) to 'execute' [168]  (8.75 ns)
+
+ <State 25>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret2', ../pingpang/neuron.cpp:195) to 'execute' [168]  (8.75 ns)
+
+ <State 26>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret2', ../pingpang/neuron.cpp:195) to 'execute' [168]  (8.75 ns)
+
+ <State 27>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret2', ../pingpang/neuron.cpp:195) to 'execute' [168]  (8.75 ns)
+
+ <State 28>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret2', ../pingpang/neuron.cpp:195) to 'execute' [168]  (8.75 ns)
+
+ <State 29>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret2', ../pingpang/neuron.cpp:195) to 'execute' [168]  (8.75 ns)
+
+ <State 30>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret2', ../pingpang/neuron.cpp:195) to 'execute' [168]  (8.75 ns)
+
+ <State 31>: 8.75ns
+The critical path consists of the following:
+	'call' operation ('call_ret2', ../pingpang/neuron.cpp:195) to 'execute' [168]  (8.75 ns)
+
+ <State 32>: 6.89ns
+The critical path consists of the following:
+	'call' operation ('call_ret2', ../pingpang/neuron.cpp:195) to 'execute' [168]  (6.89 ns)
+
+ <State 33>: 4.38ns
+The critical path consists of the following:
+	'phi' operation ('num_o', ../pingpang/neuron.cpp:242) with incoming values : ('num_o', ../pingpang/neuron.cpp:225) ('num_o', ../pingpang/neuron.cpp:231) ('num_o', ../pingpang/neuron.cpp:236) ('num_o', ../pingpang/neuron.cpp:247) ('num_o', ../pingpang/neuron.cpp:242) ('num_o', ../pingpang/neuron.cpp:257) [140]  (0 ns)
+	'add' operation ('tmp_3', ../pingpang/neuron.cpp:225) [227]  (1.02 ns)
+	multiplexor before 'phi' operation ('num_o') with incoming values : ('num_o', ../pingpang/neuron.cpp:225) ('num_o', ../pingpang/neuron.cpp:231) ('num_o', ../pingpang/neuron.cpp:236) ('num_o', ../pingpang/neuron.cpp:247) ('num_o', ../pingpang/neuron.cpp:242) ('num_o', ../pingpang/neuron.cpp:257) [231]  (0.656 ns)
+	'phi' operation ('num_o') with incoming values : ('num_o', ../pingpang/neuron.cpp:225) ('num_o', ../pingpang/neuron.cpp:231) ('num_o', ../pingpang/neuron.cpp:236) ('num_o', ../pingpang/neuron.cpp:247) ('num_o', ../pingpang/neuron.cpp:242) ('num_o', ../pingpang/neuron.cpp:257) [231]  (0 ns)
+	'add' operation ('tmp_11', ../pingpang/neuron.cpp:231) [249]  (1.02 ns)
+	multiplexor before 'phi' operation ('num_o') with incoming values : ('num_o', ../pingpang/neuron.cpp:225) ('num_o', ../pingpang/neuron.cpp:231) ('num_o', ../pingpang/neuron.cpp:236) ('num_o', ../pingpang/neuron.cpp:247) ('num_o', ../pingpang/neuron.cpp:242) ('num_o', ../pingpang/neuron.cpp:257) [270]  (0.675 ns)
+	'phi' operation ('num_o') with incoming values : ('num_o', ../pingpang/neuron.cpp:225) ('num_o', ../pingpang/neuron.cpp:231) ('num_o', ../pingpang/neuron.cpp:236) ('num_o', ../pingpang/neuron.cpp:247) ('num_o', ../pingpang/neuron.cpp:242) ('num_o', ../pingpang/neuron.cpp:257) [270]  (0 ns)
+	'add' operation ('tmp_20', ../pingpang/neuron.cpp:247) [292]  (1.02 ns)
+
+ <State 34>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'output0_s' (../pingpang/neuron.cpp:224) [224]  (8.75 ns)
+
+ <State 35>: 8.75ns
+The critical path consists of the following:
+	bus write on port 'output0_s' (../pingpang/neuron.cpp:224) [225]  (8.75 ns)
+
+ <State 36>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'output0_s' (../pingpang/neuron.cpp:224) [226]  (8.75 ns)
+
+ <State 37>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'output0_s' (../pingpang/neuron.cpp:224) [226]  (8.75 ns)
+
+ <State 38>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'output0_s' (../pingpang/neuron.cpp:224) [226]  (8.75 ns)
+
+ <State 39>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'output0_s' (../pingpang/neuron.cpp:224) [226]  (8.75 ns)
+
+ <State 40>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'output0_s' (../pingpang/neuron.cpp:224) [226]  (8.75 ns)
+
+ <State 41>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'output0_s' (../pingpang/neuron.cpp:230) [248]  (8.75 ns)
+
+ <State 42>: 8.75ns
+The critical path consists of the following:
+	bus request on port 'output0_s' (../pingpang/neuron.cpp:261) [345]  (8.75 ns)
+
+ <State 43>: 8.75ns
+The critical path consists of the following:
+	bus write on port 'output0_s' (../pingpang/neuron.cpp:261) [346]  (8.75 ns)
+
+ <State 44>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'output0_s' (../pingpang/neuron.cpp:261) [347]  (8.75 ns)
+
+ <State 45>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'output0_s' (../pingpang/neuron.cpp:261) [347]  (8.75 ns)
+
+ <State 46>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'output0_s' (../pingpang/neuron.cpp:261) [347]  (8.75 ns)
+
+ <State 47>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'output0_s' (../pingpang/neuron.cpp:261) [347]  (8.75 ns)
+
+ <State 48>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'output0_s' (../pingpang/neuron.cpp:261) [347]  (8.75 ns)
+
+ <State 49>: 8.75ns
+The critical path consists of the following:
+	bus access on port 'output0_s' (../pingpang/neuron.cpp:262) [351]  (8.75 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

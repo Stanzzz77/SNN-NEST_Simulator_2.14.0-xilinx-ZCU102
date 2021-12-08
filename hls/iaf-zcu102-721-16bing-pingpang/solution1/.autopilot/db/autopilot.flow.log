@@ -1,0 +1,892 @@
+INFO-FLOW: Workspace C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1 opened at Sun Aug 22 22:27:09 +0800 2021
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Command         ap_source done; 0.134 sec.
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Command       ap_source done; 0.182 sec.
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 34260} {LUT 274080}   {FF 548160}  {DSP48E 2520}  {BRAM 1824} {URAM 0}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Command     import_lib done; 0.335 sec.
+Execute     source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.369 sec.
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.39 sec.
+Command     ap_source done; 0.404 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus_hp.hlp 
+Execute     source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xczu9eg-ffvb1156-2-i 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu9eg:-ffvb1156:-2-i 
+Execute         get_default_platform 
+Execute         license_isbetapart xczu9eg 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 34260} {LUT 274080}   {FF 548160}  {DSP48E 2520}  {BRAM 1824} {URAM 0}  
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-i'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 34260} {LUT 274080}   {FF 548160}  {DSP48E 2520}  {BRAM 1824} {URAM 0}  
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 0.957 sec.
+Execute   set_part xczu9eg-ffvb1156-2-i -tool vivado 
+Execute     add_library xilinx/zynquplus/zynquplus:xczu9eg:-ffvb1156:-2-i 
+Execute       get_default_platform 
+Execute       license_isbetapart xczu9eg 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 34260} {LUT 274080}   {FF 548160}  {DSP48E 2520}  {BRAM 1824} {URAM 0}  
+Execute       config_chip_info -quiet -speed medium 
+Execute     add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute   create_clock -period 10 -name default 
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file '../pingpang/neuron.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling ../pingpang/neuron.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted ../pingpang/neuron.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "F:/vivado2018.2/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "../pingpang/neuron.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "F:/vivado2018.2/Vivado/2018.2/common/technology/autopilot" -I "F:/vivado2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.pp.0.cpp" 
+INFO-FLOW: exec F:/vivado2018.2/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain F:/vivado2018.2/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E ../pingpang/neuron.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I F:/vivado2018.2/Vivado/2018.2/common/technology/autopilot -I F:/vivado2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.pp.0.cpp
+Command       clang done; 2.708 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "F:/vivado2018.2/Vivado/2018.2/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "F:/vivado2018.2/Vivado/2018.2/common/technology/autopilot" -I "F:/vivado2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  "C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.pp.0.cpp"  -o "C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec F:/vivado2018.2/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain F:/vivado2018.2/Vivado/2018.2/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I F:/vivado2018.2/Vivado/2018.2/common/technology/autopilot -I F:/vivado2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.pp.0.cpp -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/useless.bc
+Command       clang done; 0.978 sec.
+INFO-FLOW: GCC PP time: 3 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.pp.0.cpp std=gnu++98 -directive=C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec F:/vivado2018.2/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-systemc-detector -import-directive=C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.933 sec.
+INFO-FLOW: CDT Preprocessing with tidy-3.1...
+Execute       tidy_31 xilinx-directive2pragma C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.pp.0.cpp std=gnu++98 -directive=C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/solution1.json 
+INFO-FLOW: exec F:/vivado2018.2/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-directive2pragma -import-directive=C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/solution1.json -quiet -fix-errors C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 0.361 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr F:/vivado2018.2/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/xilinx-dataflow-lawyer.neuron.pp.0.cpp.diag.yml C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/xilinx-dataflow-lawyer.neuron.pp.0.cpp.out.log 2> C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/xilinx-dataflow-lawyer.neuron.pp.0.cpp.err.log 
+Command       ap_eval done; 0.825 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec F:/vivado2018.2/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer -quiet -fix-errors C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: exec F:/vivado2018.2/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.733 sec.
+INFO-FLOW: tidy-3.1 time 2 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec F:/vivado2018.2/Vivado/2018.2/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* --checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.194 sec.
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "F:/vivado2018.2/Vivado/2018.2/msys" -hls  -fno-exceptions  -D__llvm__  -E "C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.pragma.1.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "F:/vivado2018.2/Vivado/2018.2/common/technology/autopilot" -I "F:/vivado2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__  -o "C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.pragma.2.cpp" 
+INFO-FLOW: exec F:/vivado2018.2/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain F:/vivado2018.2/Vivado/2018.2/msys -hls -fno-exceptions -D__llvm__ -E C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.pragma.1.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I F:/vivado2018.2/Vivado/2018.2/common/technology/autopilot -I F:/vivado2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.pragma.2.cpp
+Command       clang done; 0.724 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain F:/vivado2018.2/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "F:/vivado2018.2/Vivado/2018.2/common/technology/autopilot" -I "F:/vivado2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o "C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.bc" 
+INFO-FLOW: exec F:/vivado2018.2/Vivado/2018.2/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain F:/vivado2018.2/Vivado/2018.2/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I F:/vivado2018.2/Vivado/2018.2/common/technology/autopilot -I F:/vivado2018.2/Vivado/2018.2/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E2__ -g -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.bc
+Command       clang done; 1.006 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/neuron.g.bc -hls-opt -except-internalize update_n -LF:/vivado2018.2/Vivado/2018.2/win64/lib -lhlsm -lhlsmc++ -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 7.427 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:01 ; elapsed = 00:00:22 . Memory (MB): peak = 102.238 ; gain = 46.043
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:01 ; elapsed = 00:00:22 . Memory (MB): peak = 102.238 ; gain = 46.043
+Execute       ::config_rtl 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/a.pp.bc -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/a.pp.0.bc -f 
+Execute         llvm-ld C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LF:/vivado2018.2/Vivado/2018.2/win64/lib -lfloatconversion -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 0.418 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top update_n -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/a.g.0.bc -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:01 ; elapsed = 00:00:22 . Memory (MB): peak = 108.910 ; gain = 52.715
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/a.g.1.bc -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+Command         transform done; 0.103 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/a.g.2.prechk.bc -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:01 ; elapsed = 00:00:22 . Memory (MB): peak = 112.246 ; gain = 56.051
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/a.g.1.bc to C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/a.o.1.bc -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'update_outdata' (../pingpang/neuron.cpp:97).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'execute' (../pingpang/neuron.cpp:35).
+INFO: [XFORM 203-502] Unrolling all loops for pipelining in function 'update_indata' (../pingpang/neuron.cpp:5).
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (../pingpang/neuron.cpp:101) in function 'update_outdata' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (../pingpang/neuron.cpp:51) in function 'execute' completely.
+INFO: [XFORM 203-501] Unrolling loop 'Loop-1' (../pingpang/neuron.cpp:20) in function 'update_indata' completely.
+INFO: [XFORM 203-102] Partitioning array 'contrast' (../pingpang/neuron.cpp:49) automatically.
+INFO: [XFORM 203-131] Reshaping array 'input01.V' (../pingpang/neuron.cpp:114) in dimension 1 with a cyclic factor of 8.
+INFO: [XFORM 203-131] Reshaping array 'weighted_spikes_ex_' (../pingpang/neuron.cpp:152) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'weighted_spikes_in_' (../pingpang/neuron.cpp:152) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'I_e_' (../pingpang/neuron.cpp:152) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'i_syn_ex_' (../pingpang/neuron.cpp:152) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'i_syn_in_' (../pingpang/neuron.cpp:152) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'r_ref_' (../pingpang/neuron.cpp:152) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'V_m_' (../pingpang/neuron.cpp:153) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'V_m_r' (../pingpang/neuron.cpp:162) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'i_syn_ex_rr' (../pingpang/neuron.cpp:162) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'i_syn_in_rr' (../pingpang/neuron.cpp:162) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'r_ref_r' (../pingpang/neuron.cpp:162) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'signal_' (../pingpang/neuron.cpp:168) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'signal_1' (../pingpang/neuron.cpp:168) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'num_o' (../pingpang/neuron.cpp:172) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'weighted_spikes_ex_2' (../pingpang/neuron.cpp:175) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'weighted_spikes_in_2' (../pingpang/neuron.cpp:175) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'I_e_2' (../pingpang/neuron.cpp:175) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'i_syn_ex_2' (../pingpang/neuron.cpp:175) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'i_syn_in_2' (../pingpang/neuron.cpp:175) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'r_ref_2' (../pingpang/neuron.cpp:175) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'V_m_2' (../pingpang/neuron.cpp:176) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'stable_para' (../pingpang/neuron.cpp:112) in dimension 1 completely.
+INFO: [XFORM 203-131] Reshaping array 'input00.V' (../pingpang/neuron.cpp:113) in dimension 1 with a cyclic factor of 8.
+Command         transform done; 1.176 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/a.o.1.tmp.bc -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock to (../pingpang/neuron.cpp:95:1) in function 'execute'... converting 49 basic blocks.
+Command         transform done; 0.836 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:03 ; elapsed = 00:00:24 . Memory (MB): peak = 137.992 ; gain = 81.797
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -dead-allocation-elimination -cdfg-build C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/a.o.2.bc -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+Command         transform done; 1.277 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:05 ; elapsed = 00:00:26 . Memory (MB): peak = 163.512 ; gain = 107.316
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 3.966 sec.
+Command     elaborate done; 22.526 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'update_n' ...
+Execute       ap_set_top_model update_n 
+Execute       get_model_list update_n -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model update_n 
+Execute       preproc_iomode -model update_outdata 
+Execute       preproc_iomode -model execute 
+Execute       preproc_iomode -model update_indata 
+Execute       get_model_list update_n -filter all-wo-channel 
+INFO-FLOW: Model list for configure: update_indata execute update_outdata update_n
+INFO-FLOW: Configuring Module : update_indata ...
+Execute       set_default_model update_indata 
+Execute       apply_spec_resource_limit update_indata 
+INFO-FLOW: Configuring Module : execute ...
+Execute       set_default_model execute 
+Execute       apply_spec_resource_limit execute 
+INFO-FLOW: Configuring Module : update_outdata ...
+Execute       set_default_model update_outdata 
+Execute       apply_spec_resource_limit update_outdata 
+INFO-FLOW: Configuring Module : update_n ...
+Execute       set_default_model update_n 
+Execute       apply_spec_resource_limit update_n 
+INFO-FLOW: Model list for preprocess: update_indata execute update_outdata update_n
+INFO-FLOW: Preprocessing Module: update_indata ...
+Execute       set_default_model update_indata 
+Execute       cdfg_preprocess -model update_indata 
+Execute       rtl_gen_preprocess update_indata 
+INFO-FLOW: Preprocessing Module: execute ...
+Execute       set_default_model execute 
+Execute       cdfg_preprocess -model execute 
+Execute       rtl_gen_preprocess execute 
+INFO-FLOW: Preprocessing Module: update_outdata ...
+Execute       set_default_model update_outdata 
+Execute       cdfg_preprocess -model update_outdata 
+Execute       rtl_gen_preprocess update_outdata 
+INFO-FLOW: Preprocessing Module: update_n ...
+Execute       set_default_model update_n 
+Execute       cdfg_preprocess -model update_n 
+Execute       rtl_gen_preprocess update_n 
+INFO-FLOW: Model list for synthesis: update_indata execute update_outdata update_n
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_indata' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model update_indata 
+Execute       schedule -model update_indata 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'update_indata'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 9.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 25.822 seconds; current allocated memory: 121.280 MB.
+Execute       report -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_indata.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_indata.sched.adb -f 
+INFO-FLOW: Finish scheduling update_indata.
+Execute       set_default_model update_indata 
+Execute       bind -model update_indata 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=update_indata
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.071 seconds; current allocated memory: 121.698 MB.
+Execute       report -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_indata.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_indata.bind.adb -f 
+INFO-FLOW: Finish binding update_indata.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'execute' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model execute 
+Execute       schedule -model execute 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'execute'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 11.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.521 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.576 seconds; current allocated memory: 123.205 MB.
+Execute       report -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/execute.verbose.sched.rpt -verbose -f 
+Command       report done; 0.173 sec.
+Execute       db_write -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/execute.sched.adb -f 
+Command       db_write done; 0.102 sec.
+INFO-FLOW: Finish scheduling execute.
+Execute       set_default_model execute 
+Execute       bind -model execute 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=execute
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.133 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.419 seconds; current allocated memory: 125.107 MB.
+Execute       report -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/execute.verbose.bind.rpt -verbose -f 
+Command       report done; 0.492 sec.
+Execute       db_write -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/execute.bind.adb -f 
+Command       db_write done; 0.105 sec.
+INFO-FLOW: Finish binding execute.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_outdata' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model update_outdata 
+Execute       schedule -model update_outdata 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining function 'update_outdata'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 8.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.64 seconds; current allocated memory: 125.415 MB.
+Execute       report -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_outdata.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_outdata.sched.adb -f 
+INFO-FLOW: Finish scheduling update_outdata.
+Execute       set_default_model update_outdata 
+Execute       bind -model update_outdata 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=update_outdata
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.052 seconds; current allocated memory: 125.675 MB.
+Execute       report -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_outdata.verbose.bind.rpt -verbose -f 
+Execute       db_write -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_outdata.bind.adb -f 
+INFO-FLOW: Finish binding update_outdata.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update_n' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model update_n 
+Execute       schedule -model update_n 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between bus request on port 'output0_s' (../pingpang/neuron.cpp:230) and bus request on port 'output0_s' (../pingpang/neuron.cpp:224).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 30.
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.166 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.211 seconds; current allocated memory: 126.811 MB.
+Execute       report -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.verbose.sched.rpt -verbose -f 
+Execute       db_write -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.sched.adb -f 
+INFO-FLOW: Finish scheduling update_n.
+Execute       set_default_model update_n 
+Execute       bind -model update_n 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=update_n
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.387 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.558 seconds; current allocated memory: 128.421 MB.
+Execute       report -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.verbose.bind.rpt -verbose -f 
+Command       report done; 0.422 sec.
+Execute       db_write -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.bind.adb -f 
+INFO-FLOW: Finish binding update_n.
+Execute       get_model_list update_n -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess update_indata 
+Execute       rtl_gen_preprocess execute 
+Execute       rtl_gen_preprocess update_outdata 
+Execute       rtl_gen_preprocess update_n 
+INFO-FLOW: Model list for RTL generation: update_indata execute update_outdata update_n
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_indata' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model update_indata -vendor xilinx -mg_file C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_indata.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_indata'.
+INFO: [HLS 200-111]  Elapsed time: 0.589 seconds; current allocated memory: 129.808 MB.
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.rtl_wrap.cfg.tcl 
+Execute       gen_rtl update_indata -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/syn/systemc/update_indata -synmodules update_indata execute update_outdata update_n 
+Execute       gen_rtl update_indata -style xilinx -f -lang vhdl -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/syn/vhdl/update_indata 
+Execute       gen_rtl update_indata -style xilinx -f -lang vlog -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/syn/verilog/update_indata 
+Execute       gen_tb_info update_indata -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_indata -p C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db 
+Execute       report -model update_indata -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/syn/report/update_indata_csynth.rpt -f 
+Execute       report -model update_indata -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/syn/report/update_indata_csynth.xml -f -x 
+Execute       report -model update_indata -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_indata.verbose.rpt -verbose -f 
+Execute       db_write -model update_indata -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_indata.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'execute' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model execute -vendor xilinx -mg_file C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/execute.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'update_n_fadd_32ns_32ns_32_4_full_dsp_0' to 'update_n_fadd_32nbkb' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'update_n_fmul_32ns_32ns_32_2_max_dsp_0' to 'update_n_fmul_32ncud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'update_n_fcmp_32ns_32ns_1_1_0' to 'update_n_fcmp_32ndEe' due to the length limit 20
+INFO: [RTGEN 206-104] Estimated max fanout for 'execute' is 11604 from HDL expression: ((1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_ce_reg))
+INFO: [RTGEN 206-100] Generating core module 'update_n_fadd_32nbkb': 48 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'update_n_fcmp_32ndEe': 16 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'update_n_fmul_32ncud': 48 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'execute'.
+Command       create_rtl_model done; 0.262 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.498 seconds; current allocated memory: 135.072 MB.
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.rtl_wrap.cfg.tcl 
+Execute       gen_rtl execute -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/syn/systemc/execute -synmodules update_indata execute update_outdata update_n 
+Execute       gen_rtl execute -style xilinx -f -lang vhdl -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/syn/vhdl/execute 
+Execute       gen_rtl execute -style xilinx -f -lang vlog -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/syn/verilog/execute 
+Execute       gen_tb_info execute -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/execute -p C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db 
+Command       gen_tb_info done; 0.128 sec.
+Execute       report -model execute -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/syn/report/execute_csynth.rpt -f 
+Command       report done; 0.137 sec.
+Execute       report -model execute -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/syn/report/execute_csynth.xml -f -x 
+Command       report done; 0.13 sec.
+Execute       report -model execute -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/execute.verbose.rpt -verbose -f 
+Command       report done; 0.632 sec.
+Execute       db_write -model execute -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/execute.adb -f 
+Command       db_write done; 0.29 sec.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_outdata' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model update_outdata -vendor xilinx -mg_file C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_outdata.compgen.tcl 
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_outdata'.
+INFO: [HLS 200-111]  Elapsed time: 1.997 seconds; current allocated memory: 136.751 MB.
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.rtl_wrap.cfg.tcl 
+Execute       gen_rtl update_outdata -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/syn/systemc/update_outdata -synmodules update_indata execute update_outdata update_n 
+Execute       gen_rtl update_outdata -style xilinx -f -lang vhdl -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/syn/vhdl/update_outdata 
+Execute       gen_rtl update_outdata -style xilinx -f -lang vlog -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/syn/verilog/update_outdata 
+Execute       gen_tb_info update_outdata -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_outdata -p C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db 
+Execute       report -model update_outdata -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/syn/report/update_outdata_csynth.rpt -f 
+Execute       report -model update_outdata -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/syn/report/update_outdata_csynth.xml -f -x 
+Execute       report -model update_outdata -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_outdata.verbose.rpt -verbose -f 
+Execute       db_write -model update_outdata -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_outdata.adb -f 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update_n' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model update_n -vendor xilinx -mg_file C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'update_n/stable_para' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'update_n/input01' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'update_n/input00' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'update_n/output0_s' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'update_n/output1_s' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'update_n/num' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'update_n/stable_para_offset' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'update_n/input00_V' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'update_n/input01_V' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'update_n/output0_offset' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'update_n/output1_offset' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'update_n/output2_s' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on port 'update_n/output3_s' to 's_axilite & ap_none' (register).
+INFO: [RTGEN 206-500] Setting interface mode on function 'update_n' to 's_axilite & ap_ctrl_hs' (register).
+INFO: [RTGEN 206-100] Bundling port 'return', 'num', 'stable_para_offset', 'input00_V', 'input01_V', 'output0_offset', 'output1_offset', 'output2_s' and 'output3_s' to AXI-Lite port ctrl_bus.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update_n'.
+Command       create_rtl_model done; 0.54 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.729 seconds; current allocated memory: 141.730 MB.
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.rtl_wrap.cfg.tcl 
+Execute       gen_rtl update_n -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/syn/systemc/update_n -synmodules update_indata execute update_outdata update_n 
+Execute       gen_rtl update_n -istop -style xilinx -f -lang vhdl -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/syn/vhdl/update_n 
+Execute       gen_rtl update_n -istop -style xilinx -f -lang vlog -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/syn/verilog/update_n 
+Execute       export_constraint_db -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.constraint.tcl -f -tool general 
+Execute       report -model update_n -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.design.xml -verbose -f -dv 
+Command       report done; 0.358 sec.
+Execute       report -model update_n -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.sdaccel.xml -verbose -f -sdaccel 
+Command       report done; 0.136 sec.
+Execute       gen_tb_info update_n -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n -p C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db 
+Execute       report -model update_n -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/syn/report/update_n_csynth.rpt -f 
+Execute       report -model update_n -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/syn/report/update_n_csynth.xml -f -x 
+Execute       report -model update_n -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.verbose.rpt -verbose -f 
+Command       report done; 0.483 sec.
+Execute       db_write -model update_n -o C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.adb -f 
+Command       db_write done; 0.176 sec.
+Execute       sc_get_clocks update_n 
+Execute       sc_get_portdomain update_n 
+INFO-FLOW: Model list for RTL component generation: update_indata execute update_outdata update_n
+INFO-FLOW: Handling components in module [update_indata] ... 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_indata.compgen.tcl 
+INFO-FLOW: Handling components in module [execute] ... 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/execute.compgen.tcl 
+INFO-FLOW: Found component update_n_fadd_32nbkb.
+INFO-FLOW: Append model update_n_fadd_32nbkb
+INFO-FLOW: Found component update_n_fmul_32ncud.
+INFO-FLOW: Append model update_n_fmul_32ncud
+INFO-FLOW: Found component update_n_fcmp_32ndEe.
+INFO-FLOW: Append model update_n_fcmp_32ndEe
+INFO-FLOW: Handling components in module [update_outdata] ... 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_outdata.compgen.tcl 
+INFO-FLOW: Handling components in module [update_n] ... 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.compgen.tcl 
+INFO-FLOW: Found component update_n_ctrl_bus_s_axi.
+INFO-FLOW: Append model update_n_ctrl_bus_s_axi
+INFO-FLOW: Found component update_n_stable_para_m_axi.
+INFO-FLOW: Append model update_n_stable_para_m_axi
+INFO-FLOW: Found component update_n_input01_m_axi.
+INFO-FLOW: Append model update_n_input01_m_axi
+INFO-FLOW: Found component update_n_input00_m_axi.
+INFO-FLOW: Append model update_n_input00_m_axi
+INFO-FLOW: Found component update_n_output0_s_m_axi.
+INFO-FLOW: Append model update_n_output0_s_m_axi
+INFO-FLOW: Found component update_n_output1_s_m_axi.
+INFO-FLOW: Append model update_n_output1_s_m_axi
+INFO-FLOW: Append model update_indata
+INFO-FLOW: Append model execute
+INFO-FLOW: Append model update_outdata
+INFO-FLOW: Append model update_n
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: update_n_fadd_32nbkb update_n_fmul_32ncud update_n_fcmp_32ndEe update_n_ctrl_bus_s_axi update_n_stable_para_m_axi update_n_input01_m_axi update_n_input00_m_axi update_n_output0_s_m_axi update_n_output1_s_m_axi update_indata execute update_outdata update_n
+INFO-FLOW: To file: write model update_n_fadd_32nbkb
+INFO-FLOW: To file: write model update_n_fmul_32ncud
+INFO-FLOW: To file: write model update_n_fcmp_32ndEe
+INFO-FLOW: To file: write model update_n_ctrl_bus_s_axi
+INFO-FLOW: To file: write model update_n_stable_para_m_axi
+INFO-FLOW: To file: write model update_n_input01_m_axi
+INFO-FLOW: To file: write model update_n_input00_m_axi
+INFO-FLOW: To file: write model update_n_output0_s_m_axi
+INFO-FLOW: To file: write model update_n_output1_s_m_axi
+INFO-FLOW: To file: write model update_indata
+INFO-FLOW: To file: write model execute
+INFO-FLOW: To file: write model update_outdata
+INFO-FLOW: To file: write model update_n
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+Execute       get_config_sdx -target 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_indata.compgen.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/execute.compgen.tcl 
+Command       ap_source done; 0.106 sec.
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_outdata.compgen.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.compgen.tcl 
+Execute         source ./ctrl_bus.slave.tcl 
+Execute         is_m_axi_addr64 
+Command       ap_source done; 0.179 sec.
+Execute       get_config_sdx -target 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute               source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.rtl_wrap.cfg.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_indata.compgen.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/execute.compgen.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_outdata.compgen.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.compgen.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_indata.compgen.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/execute.compgen.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_outdata.compgen.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.compgen.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_indata.compgen.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/execute.compgen.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_outdata.compgen.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.compgen.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.constraint.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.constraint.tcl 
+Execute       sc_get_clocks update_n 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/impl/misc/update_n_ap_fadd_2_full_dsp_32_ip.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/impl/misc/update_n_ap_fcmp_0_no_dsp_32_ip.tcl 
+Execute       source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/impl/misc/update_n_ap_fmul_0_max_dsp_32_ip.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:12 ; elapsed = 00:00:36 . Memory (MB): peak = 213.742 ; gain = 157.547
+INFO: [SYSC 207-301] Generating SystemC RTL for update_n.
+INFO: [VHDL 208-304] Generating VHDL RTL for update_n.
+INFO: [VLOG 209-307] Generating Verilog RTL for update_n.
+Command     autosyn done; 10.097 sec.
+Command   csynth_design done; 32.629 sec.
+Command ap_source done; 33.658 sec.
+Execute cleanup_all 
+INFO-FLOW: Workspace C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1 opened at Sun Aug 22 22:28:54 +0800 2021
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.lib 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/plb46.lib 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/fsl.lib 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/axi4.lib 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.lib 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.lib 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.lib 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfft.lib 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfir.lib 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/zynquplus/dsp48e2.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 34260} {LUT 274080}   {FF 548160}  {DSP48E 2520}  {BRAM 1824} {URAM 0}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute     source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.109 sec.
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.11 sec.
+Command     ap_source done; 0.111 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus_fpv7 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.hlp 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/target_info.tcl 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.hlp 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.hlp 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus_hp.hlp 
+Execute     source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xczu9eg-ffvb1156-2-i 
+Execute       add_library xilinx/zynquplus/zynquplus:xczu9eg:-ffvb1156:-2-i 
+Execute         get_default_platform 
+Execute         license_isbetapart xczu9eg 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 34260} {LUT 274080}   {FF 548160}  {DSP48E 2520}  {BRAM 1824} {URAM 0}  
+Execute         config_chip_info -quiet -speed medium 
+Execute       add_library xilinx/zynquplus/zynquplus_fpv7 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xczu9eg-ffvb1156-2-i'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 34260} {LUT 274080}   {FF 548160}  {DSP48E 2520}  {BRAM 1824} {URAM 0}  
+Execute     config_chip_info -quiet -speed medium 
+Command   open_solution done; 0.198 sec.
+Execute   export_design -rtl verilog -format ip_catalog 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.102 sec.
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.103 sec.
+Command     ap_source done; 0.103 sec.
+Execute     source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute     get_config_sdx -target 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Execute     source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_indata.compgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/execute.compgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_outdata.compgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.compgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_indata.compgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/execute.compgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_outdata.compgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.compgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_indata.compgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/execute.compgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_outdata.compgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.compgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.constraint.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.rtl_wrap.cfg.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.constraint.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.constraint.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.constraint.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/update_n.tbgen.tcl 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/common.gen 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/APCoreGen.gen 
+Execute     source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/op.gen 
+Execute     source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/op_simcore.gen 
+Execute     source F:/vivado2018.2/Vivado/2018.2/common/technology/generic/autopilot/interface.gen 
+Execute     source C:/Users/Stan/Desktop/hls_code/zhu/hls/iaf-zcu102-721-16bing-pingpang/solution1/.autopilot/db/global.setting.tcl 
+Execute     source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus.gen 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/virtex.gen 
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/plb46.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/fsl.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/axi4.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/saxilite.gen 
+Execute             source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/maxi.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/util.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfft.gen 
+Execute           source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.103 sec.
+Execute         source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.105 sec.
+Command     ap_source done; 0.105 sec.
+Execute     source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/zynquplus/zynquplus_fpv7.gen 
+Execute       source F:/vivado2018.2/Vivado/2018.2/common/technology/xilinx/common/xilinx_fpv6.gen 
+Command   export_design done; 16.993 sec.
+Command ap_source done; 17.194 sec.
+Execute cleanup_all 

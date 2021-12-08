@@ -1,0 +1,252 @@
+
+
+================================================================
+== Vivado HLS Report for 'update_indata'
+================================================================
+* Date:           Sun Aug 22 22:27:36 2021
+
+* Version:        2018.2 (Build 2258646 on Thu Jun 14 20:25:20 MDT 2018)
+* Project:        iaf-zcu102-721-16bing-pingpang
+* Solution:       solution1
+* Product family: zynquplus
+* Target device:  xczu9eg-ffvb1156-2-i
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.750|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    8|    8|    1|    1| function |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       0|      80|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |        -|      -|       -|       -|    -|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|      54|    -|
+|Register         |        -|      -|      63|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |        0|      0|      63|     134|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |     1824|   2520|  548160|  274080|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |        0|      0|   ~0   |   ~0   |    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |sum3_fu_232_p2                    |     +    |      0|  0|  33|          26|          26|
+    |sum_fu_222_p2                     |     +    |      0|  0|  33|          26|          26|
+    |ap_condition_900                  |    and   |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_01001         |    or    |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001         |    or    |      0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_subdone       |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state2_io                |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state9_pp0_stage0_iter8  |    or    |      0|  0|   2|           1|           1|
+    |ap_enable_pp0                     |    xor   |      0|  0|   2|           1|           2|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0|  80|          59|          60|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------+----+-----------+-----+-----------+
+    |                  Name                  | LUT| Input Size| Bits| Total Bits|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |ap_sig_ioackin_m_axi_input00_V_ARREADY  |   9|          2|    1|          2|
+    |ap_sig_ioackin_m_axi_input01_V_ARREADY  |   9|          2|    1|          2|
+    |input00_V_blk_n_AR                      |   9|          2|    1|          2|
+    |input00_V_blk_n_R                       |   9|          2|    1|          2|
+    |input01_V_blk_n_AR                      |   9|          2|    1|          2|
+    |input01_V_blk_n_R                       |   9|          2|    1|          2|
+    +----------------------------------------+----+-----------+-----+-----------+
+    |Total                                   |  54|         12|    6|         12|
+    +----------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------+----+----+-----+-----------+
+    |                  Name                  | FF | LUT| Bits| Const Bits|
+    +----------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                               |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                 |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                 |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter3                 |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter4                 |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter5                 |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter6                 |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter7                 |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter8                 |   1|   0|    1|          0|
+    |ap_reg_ioackin_m_axi_input00_V_ARREADY  |   1|   0|    1|          0|
+    |ap_reg_ioackin_m_axi_input01_V_ARREADY  |   1|   0|    1|          0|
+    |sum3_reg_993                            |  26|   0|   26|          0|
+    |sum_reg_988                             |  26|   0|   26|          0|
+    +----------------------------------------+----+----+-----+-----------+
+    |Total                                   |  63|   0|   63|          0|
+    +----------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+------+------------+------------------+--------------+
+|         RTL Ports        | Dir | Bits |  Protocol  |   Source Object  |    C Type    |
++--------------------------+-----+------+------------+------------------+--------------+
+|ap_clk                    |  in |     1| ap_ctrl_hs |   update_indata  | return value |
+|ap_rst                    |  in |     1| ap_ctrl_hs |   update_indata  | return value |
+|ap_start                  |  in |     1| ap_ctrl_hs |   update_indata  | return value |
+|ap_done                   | out |     1| ap_ctrl_hs |   update_indata  | return value |
+|ap_idle                   | out |     1| ap_ctrl_hs |   update_indata  | return value |
+|ap_ready                  | out |     1| ap_ctrl_hs |   update_indata  | return value |
+|ap_ce                     |  in |     1| ap_ctrl_hs |   update_indata  | return value |
+|ap_return_0               | out |   256| ap_ctrl_hs |   update_indata  | return value |
+|ap_return_1               | out |   256| ap_ctrl_hs |   update_indata  | return value |
+|ap_return_2               | out |   256| ap_ctrl_hs |   update_indata  | return value |
+|ap_return_3               | out |   256| ap_ctrl_hs |   update_indata  | return value |
+|ap_return_4               | out |   256| ap_ctrl_hs |   update_indata  | return value |
+|ap_return_5               | out |   256| ap_ctrl_hs |   update_indata  | return value |
+|ap_return_6               | out |   256| ap_ctrl_hs |   update_indata  | return value |
+|input00_V_blk_n_AR        | out |     1| ap_ctrl_hs |   update_indata  | return value |
+|input00_V_blk_n_R         | out |     1| ap_ctrl_hs |   update_indata  | return value |
+|input01_V_blk_n_AR        | out |     1| ap_ctrl_hs |   update_indata  | return value |
+|input01_V_blk_n_R         | out |     1| ap_ctrl_hs |   update_indata  | return value |
+|m_axi_input00_V_AWVALID   | out |     1|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_AWREADY   |  in |     1|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_AWADDR    | out |    32|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_AWID      | out |     1|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_AWLEN     | out |    32|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_AWSIZE    | out |     3|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_AWBURST   | out |     2|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_AWLOCK    | out |     2|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_AWCACHE   | out |     4|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_AWPROT    | out |     3|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_AWQOS     | out |     4|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_AWREGION  | out |     4|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_AWUSER    | out |     1|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_WVALID    | out |     1|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_WREADY    |  in |     1|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_WDATA     | out |  1024|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_WSTRB     | out |   128|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_WLAST     | out |     1|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_WID       | out |     1|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_WUSER     | out |     1|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_ARVALID   | out |     1|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_ARREADY   |  in |     1|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_ARADDR    | out |    32|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_ARID      | out |     1|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_ARLEN     | out |    32|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_ARSIZE    | out |     3|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_ARBURST   | out |     2|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_ARLOCK    | out |     2|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_ARCACHE   | out |     4|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_ARPROT    | out |     3|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_ARQOS     | out |     4|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_ARREGION  | out |     4|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_ARUSER    | out |     1|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_RVALID    |  in |     1|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_RREADY    | out |     1|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_RDATA     |  in |  1024|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_RLAST     |  in |     1|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_RID       |  in |     1|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_RUSER     |  in |     1|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_RRESP     |  in |     2|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_BVALID    |  in |     1|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_BREADY    | out |     1|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_BRESP     |  in |     2|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_BID       |  in |     1|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input00_V_BUSER     |  in |     1|    m_axi   |     input00_V    |    pointer   |
+|m_axi_input01_V_AWVALID   | out |     1|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_AWREADY   |  in |     1|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_AWADDR    | out |    32|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_AWID      | out |     1|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_AWLEN     | out |    32|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_AWSIZE    | out |     3|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_AWBURST   | out |     2|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_AWLOCK    | out |     2|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_AWCACHE   | out |     4|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_AWPROT    | out |     3|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_AWQOS     | out |     4|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_AWREGION  | out |     4|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_AWUSER    | out |     1|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_WVALID    | out |     1|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_WREADY    |  in |     1|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_WDATA     | out |  1024|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_WSTRB     | out |   128|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_WLAST     | out |     1|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_WID       | out |     1|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_WUSER     | out |     1|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_ARVALID   | out |     1|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_ARREADY   |  in |     1|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_ARADDR    | out |    32|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_ARID      | out |     1|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_ARLEN     | out |    32|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_ARSIZE    | out |     3|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_ARBURST   | out |     2|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_ARLOCK    | out |     2|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_ARCACHE   | out |     4|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_ARPROT    | out |     3|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_ARQOS     | out |     4|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_ARREGION  | out |     4|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_ARUSER    | out |     1|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_RVALID    |  in |     1|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_RREADY    | out |     1|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_RDATA     |  in |  1024|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_RLAST     |  in |     1|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_RID       |  in |     1|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_RUSER     |  in |     1|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_RRESP     |  in |     2|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_BVALID    |  in |     1|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_BREADY    | out |     1|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_BRESP     |  in |     2|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_BID       |  in |     1|    m_axi   |     input01_V    |    pointer   |
+|m_axi_input01_V_BUSER     |  in |     1|    m_axi   |     input01_V    |    pointer   |
+|i                         |  in |    30|   ap_none  |         i        |    scalar    |
+|input00_V_offset          |  in |    25|   ap_none  | input00_V_offset |    scalar    |
+|input01_V_offset          |  in |    25|   ap_none  | input01_V_offset |    scalar    |
++--------------------------+-----+------+------------+------------------+--------------+
+

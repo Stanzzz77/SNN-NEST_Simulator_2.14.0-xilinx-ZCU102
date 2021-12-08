@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <simLog/>
+      <mgLog/>
+      <packageLog/>
+      <csimLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)&#xD;&#xA;   between bus request on port 'output0_s' (../pingpang/neuron.cpp:230) and bus request on port 'output0_s' (../pingpang/neuron.cpp:224)." projectName="iaf-zcu102-721-16bing-pingpang" solutionName="solution1" date="2021-08-22T22:27:34.770+0800" type="Warning"/>
+      </synLog>
+      <simLog/>
+      <mgLog/>
+      <packageLog>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'update_n_ap_fmul_0_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="iaf-zcu102-721-16bing-pingpang" solutionName="solution1" date="2021-08-22T22:29:08.343+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'update_n_ap_fcmp_0_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="iaf-zcu102-721-16bing-pingpang" solutionName="solution1" date="2021-08-22T22:29:07.200+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'update_n_ap_fadd_2_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="iaf-zcu102-721-16bing-pingpang" solutionName="solution1" date="2021-08-22T22:29:05.732+0800" type="Warning"/>
+      </packageLog>
+      <csimLog/>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

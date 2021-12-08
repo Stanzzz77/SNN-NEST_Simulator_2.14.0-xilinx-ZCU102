@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="neuron.cpp" path="C:\Users\Stan\Desktop\hls_code\zhu\pingpang\neuron.cpp"/>
+    <originFiles name="neuron.hpp" path="C:\Users\Stan\Desktop\hls_code\zhu\pingpang\neuron.hpp"/>
+  </source>
+  <testbench/>
+</autopilotfilemapping:AutoPilotFileMapping>
