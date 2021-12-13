@@ -1,5 +1,7 @@
 # SNN-NEST_Simulator_2.14.0-xilinx-ZCU102
-A nest brain simulator based on FPGA(LIF NEURON)
-
-NEST-2.14-FPGA为双线程版本
-
+High efficiency computer system lab
+## Introduction
+A Spiking neural network simulator NEST base on FPGA(LIF NEURON)
+* Spiking neuron network simulator NEST
+* SNN image classification
+* Neuron computing accelerator base on FPGA
