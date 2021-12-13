@@ -12,3 +12,7 @@ On this basis, we designed FPGA neuron acceleration module and FPGA acceleration
 
 The platform of the project is constructed by xilinx-zcu102 board, and the main chip of the board is xzcu9eg. It is mainly composed of programmable logic FPGA (PL) and arm processor (PS). Among them, the FPGA clock frequency at PL end is 100MHz, the arm cortex-a53 quad core processor at PS end is 1GHz, and the memory size is 4GB DDR4.
 
+## Quick Start
+* If you would like to use the Jupyter notebook on PYNQ to perform the simulation on NEST, please click here
+* Petalinux
+* 
