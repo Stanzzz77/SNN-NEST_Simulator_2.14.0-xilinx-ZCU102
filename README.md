@@ -15,4 +15,5 @@ The platform of the project is constructed by xilinx-zcu102 board, and the main 
 ## Quick Start
 * If you would like to use the Jupyter notebook on PYNQ to perform the simulation on NEST, please click here
 * Petalinux
-* 
+* Install NEST-2.14.0-FPGA
+
