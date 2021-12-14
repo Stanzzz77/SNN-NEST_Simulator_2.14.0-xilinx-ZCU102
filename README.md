@@ -80,10 +80,16 @@ design_1.bin：LIF NEURON bitstream
 * NEST_PYNQ_Jupyter: An example of image classification based on Jupyter Notebook on PYNQ.
 ## References
 * NEST
-NEST is a simulator for spiking neural network models, ideal for networks of any size.
-NEST Simulation:http://www.nest-simulator.org
-NEST-14.0 github：https://github.com/nest/nest-simulator/releases/tag/v2.14.0
+
+  NEST is a simulator for spiking neural network models, ideal for networks of any size.
+
+  NEST Simulation:http://www.nest-simulator.org
+
+  NEST-14.0 github：https://github.com/nest/nest-simulator/releases/tag/v2.14.0
+
 * PyNN
-A Python package for simulator-independent specification of neuronal network models.
-PyNN :http://neuralensemble.org/PyNN/
+
+  A Python package for simulator-independent specification of neuronal network models.
+
+  PyNN :http://neuralensemble.org/PyNN/
 
