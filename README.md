@@ -70,4 +70,19 @@ Install PyNN:
 pip install pyNN
 ```
 References:http://neuralensemble.org/docs/PyNN/installation.html
-
+## Repo organization
+The repo is organized as follows:
+* snn_object：Describes a new biologically plausible mechanism for generating intermediate-level visual representations using an unsupervised learning scheme.
+design_1.bin：LIF NEURON bitstream
+* NEST-2.14-FPGA: implemention Spiking neural network simulator NEST on FPGA 
+* hls: NEST LIF Neuron accelerator implemented in vivado HLS 2018.2
+* vivado: create vivado project to get block_design.tcl and block_design.bin
+* NEST_PYNQ_Jupyter: An example of image classification based on Jupyter Notebook on PYNQ.
+## References
+**NEST**
+NEST is a simulator for spiking neural network models, ideal for networks of any size.
+NEST Simulation:http://www.nest-simulator.org
+NEST-14.0 github：https://github.com/nest/nest-simulator/releases/tag/v2.14.0
+**PyNN**
+A Python package for simulator-independent specification of neuronal network models.
+PyNN :http://neuralensemble.org/PyNN/
